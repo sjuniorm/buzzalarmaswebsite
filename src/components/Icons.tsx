@@ -201,3 +201,50 @@ export function ArrowRightIcon({ className = "w-6 h-6" }: IconProps) {
     </svg>
   );
 }
+
+export function BroadcastIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+      <path d="M8.5 9.5a5 5 0 0 0 0 5" />
+      <path d="M15.5 9.5a5 5 0 0 1 0 5" />
+      <path d="M5 7a9 9 0 0 0 0 10" />
+      <path d="M19 7a9 9 0 0 1 0 10" />
+    </svg>
+  );
+}
+
+export function CameraIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+      <circle cx="12" cy="13" r="4" />
+    </svg>
+  );
+}
+
+export function ShieldCheckIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <polyline points="9 12 11 14 15 10" />
+    </svg>
+  );
+}
+
+export function BellIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+      <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+    </svg>
+  );
+}
+
+export function KeyIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+    </svg>
+  );
+}

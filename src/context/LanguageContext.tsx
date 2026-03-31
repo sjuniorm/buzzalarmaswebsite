@@ -122,27 +122,49 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "Más de dos décadas protegiendo hogares y negocios. Conocemos la seguridad por dentro y por fuera.",
   },
 
-  // How It Works
-  "how.title": { en: "How It Works", es: "Cómo funciona" },
-  "how.sub": {
-    en: "Protected in 3 simple steps",
-    es: "Protegido en 3 sencillos pasos",
+  // How It Works (7-step timeline)
+  "how2.title": { en: "How It Works", es: "Cómo funciona" },
+  "how2.sub": {
+    en: "From installation to police on-site — see exactly how our system protects you, step by step.",
+    es: "Desde la instalación hasta la policía en el lugar — descubre exactamente cómo te protege nuestro sistema.",
   },
-  "how.step1.title": { en: "1. Contact Us", es: "1. Contáctanos" },
-  "how.step1.desc": {
-    en: "Call, WhatsApp or fill out our form. We'll discuss your property and recommend the right system.",
-    es: "Llama, escríbenos por WhatsApp o rellena nuestro formulario. Te asesoramos y recomendamos el sistema ideal.",
+  "how2.step1.title": { en: "System Installed", es: "Sistema instalado" },
+  "how2.step1.desc": {
+    en: "Our team installs your wireless alarm system cleanly and quickly — in your home or business. Free of charge. No drilling.",
+    es: "Nuestro equipo instala tu sistema de alarma inalámbrico de forma limpia y rápida, en tu hogar o negocio. Sin coste y sin taladros.",
   },
-  "how.step2.title": { en: "2. We Install", es: "2. Instalamos" },
-  "how.step2.desc": {
-    en: "Our team arrives on time, installs cleanly and walks you through everything. Free of charge.",
-    es: "Nuestro equipo llega puntual, instala limpiamente y te explica todo. Sin coste adicional.",
+  "how2.step2.title": { en: "You Leave & Arm It", es: "Sales y la activas" },
+  "how2.step2.desc": {
+    en: "You leave the property and arm the alarm in seconds via the mobile app — from anywhere in the world.",
+    es: "Sales de la propiedad y activas la alarma en segundos desde la app móvil, desde cualquier parte del mundo.",
   },
-  "how.step3.title": { en: "3. You're Protected", es: "3. Estás protegido" },
-  "how.step3.desc": {
-    en: "Your system is live. Our control room monitors 24/7. Sleep easy.",
-    es: "Tu sistema está activo. Nuestra central vigila las 24 horas. Duerme tranquilo.",
+  "how2.step3.title": { en: "Intrusion Detected", es: "Intrusión detectada" },
+  "how2.step3.desc": {
+    en: "A sensor detects movement — outdoor perimeter or indoor. The system registers the intrusion instantly.",
+    es: "Un sensor detecta movimiento — perímetro exterior o interior. El sistema registra la intrusión al instante.",
   },
+  "how2.step4.title": { en: "Signal Sent to Control Room", es: "Señal enviada a la central" },
+  "how2.step4.desc": {
+    en: "Your alarm triggers and sends an instant signal to our 24/7 monitoring control room. Response begins in seconds.",
+    es: "Tu alarma salta y envía una señal instantánea a nuestra central de vigilancia 24/7. La respuesta comienza en segundos.",
+  },
+  "how2.step5.title": { en: "Police Dispatched", es: "Policía enviada" },
+  "how2.step5.desc": {
+    en: "Our control room verifies the alert and immediately contacts the police or security service. Real response — not just a siren.",
+    es: "Nuestra central verifica la alerta y contacta inmediatamente con la policía o el servicio de seguridad. Respuesta real, no solo una sirena.",
+  },
+  "how2.step6.title": { en: "You Get Notified", es: "Recibes la notificación" },
+  "how2.step6.desc": {
+    en: "You receive an instant push notification on your phone. Open the app to see your cameras in real time.",
+    es: "Recibes una notificación push instantánea en tu móvil. Abre la app para ver tus cámaras en tiempo real.",
+  },
+  "how2.step7.title": { en: "Situation Resolved", es: "Situación resuelta" },
+  "how2.step7.desc": {
+    en: "Authorities are on site handling the situation. Your property is secure. You see it all from your phone.",
+    es: "Las autoridades están en el lugar gestionando la situación. Tu propiedad está segura. Lo ves todo desde tu móvil.",
+  },
+  "how2.live": { en: "Live alert active", es: "Alerta activa en tiempo real" },
+  "how2.resolved": { en: "Situation resolved", es: "Situación resuelta" },
 
   // Testimonials
   "testimonials.title": { en: "What Our Clients Say", es: "Lo que dicen nuestros clientes" },
