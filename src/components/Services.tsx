@@ -2,45 +2,25 @@
 
 import { motion } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
+import { HomeIcon, BuildingIcon, EyeIcon, SmartphoneIcon, LockIcon, FlameIcon } from "@/components/Icons";
 
 const services = [
-  {
-    icon: "🏠",
-    titleKey: "services.home.title",
-    descKey: "services.home.desc",
-  },
-  {
-    icon: "🏢",
-    titleKey: "services.business.title",
-    descKey: "services.business.desc",
-  },
-  {
-    icon: "📡",
-    titleKey: "services.monitoring.title",
-    descKey: "services.monitoring.desc",
-  },
-  {
-    icon: "📱",
-    titleKey: "services.app.title",
-    descKey: "services.app.desc",
-  },
-  {
-    icon: "🚫",
-    titleKey: "services.squatter.title",
-    descKey: "services.squatter.desc",
-  },
-  {
-    icon: "🔥",
-    titleKey: "services.fire.title",
-    descKey: "services.fire.desc",
-  },
+  { Icon: HomeIcon, titleKey: "services.home.title", descKey: "services.home.desc" },
+  { Icon: BuildingIcon, titleKey: "services.business.title", descKey: "services.business.desc" },
+  { Icon: EyeIcon, titleKey: "services.monitoring.title", descKey: "services.monitoring.desc" },
+  { Icon: SmartphoneIcon, titleKey: "services.app.title", descKey: "services.app.desc" },
+  { Icon: LockIcon, titleKey: "services.squatter.title", descKey: "services.squatter.desc" },
+  { Icon: FlameIcon, titleKey: "services.fire.title", descKey: "services.fire.desc" },
 ];
 
 export default function Services() {
   const { t } = useLang();
 
   return (
-    <section id="services" className="py-24 bg-dark-2">
+    <section id="services" className="py-24 bg-dark-2 relative overflow-hidden">
+      {/* Top gradient fade from dark */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange/30 to-transparent" />
+
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -59,21 +39,24 @@ export default function Services() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, i) => (
+          {services.map(({ Icon, titleKey, descKey }, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-dark-3 border border-white/5 hover:border-orange/40 rounded-2xl p-8 transition-all duration-300 hover:bg-dark-3/80"
+              className="group bg-dark-3 border border-white/5 hover:border-orange/50 rounded-2xl p-8 transition-all duration-300"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
+              {/* Icon circle */}
+              <div className="w-12 h-12 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-colors duration-300">
+                <Icon className="w-5 h-5 text-orange" />
+              </div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange transition-colors duration-200">
-                {t(service.titleKey)}
+                {t(titleKey)}
               </h3>
               <p className="text-white/50 text-sm leading-relaxed">
-                {t(service.descKey)}
+                {t(descKey)}
               </p>
             </motion.div>
           ))}

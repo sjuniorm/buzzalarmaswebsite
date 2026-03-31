@@ -2,6 +2,8 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import Stats from "@/components/Stats";
+import Urgency from "@/components/Urgency";
 import Services from "@/components/Services";
 import WhyBuzz from "@/components/WhyBuzz";
 import HowItWorks from "@/components/HowItWorks";
@@ -17,6 +19,8 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <Stats />
+        <Urgency />
         <Services />
         <WhyBuzz />
         <HowItWorks />

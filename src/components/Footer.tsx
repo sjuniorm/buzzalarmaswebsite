@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useLang } from "@/context/LanguageContext";
+import { PhoneIcon, WhatsAppIcon, MailIcon } from "@/components/Icons";
 
 const socials = [
   {
@@ -39,18 +40,18 @@ export default function Footer() {
   return (
     <footer className="bg-dark-2 border-t border-white/5 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-10 mb-12">
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
           {/* Logo + tagline */}
-          <div>
+          <div className="md:col-span-1">
             <Image
               src="/images/logo-white.png"
               alt="Buzz Alarmas"
-              width={140}
-              height={50}
-              className="h-10 w-auto object-contain mb-4"
+              width={180}
+              height={65}
+              className="h-14 w-auto object-contain mb-4"
             />
             <p className="text-white/40 text-sm">{t("footer.tagline")}</p>
-            <p className="text-white/30 text-xs mt-2">{t("footer.certified")}</p>
+            <p className="text-white/25 text-xs mt-2">{t("footer.certified")}</p>
             <div className="flex gap-3 mt-5">
               {socials.map((s) => (
                 <a
@@ -72,31 +73,65 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-widest">
               {t("nav.services")}
             </h4>
-            <ul className="space-y-2 text-sm text-white/40">
+            <ul className="space-y-2.5 text-sm text-white/40">
               <li><a href="#services" className="hover:text-orange transition-colors">{t("services.home.title")}</a></li>
               <li><a href="#services" className="hover:text-orange transition-colors">{t("services.business.title")}</a></li>
               <li><a href="#services" className="hover:text-orange transition-colors">{t("services.monitoring.title")}</a></li>
               <li><a href="#services" className="hover:text-orange transition-colors">{t("services.squatter.title")}</a></li>
+              <li><a href="#services" className="hover:text-orange transition-colors">{t("services.fire.title")}</a></li>
             </ul>
           </div>
 
-          {/* Contact info */}
+          {/* Phone numbers */}
           <div>
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-widest">
-              Contact
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-widest flex items-center gap-2">
+              <PhoneIcon className="w-3.5 h-3.5 text-orange" />
+              {t("contact.reach")}
             </h4>
-            <ul className="space-y-2 text-sm text-white/40">
+            <ul className="space-y-2.5 text-sm text-white/40">
               <li>
-                <a
-                  href="mailto:hola@buzzalarmas.com"
-                  className="hover:text-orange transition-colors"
-                >
+                <a href="tel:+34902099910" className="hover:text-orange transition-colors">
+                  +34 902 099 910 <span className="text-white/25 text-xs">(Main)</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+34922099200" className="hover:text-orange transition-colors">
+                  +34 922 099 200 <span className="text-white/25 text-xs">(Tenerife)</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+34928077079" className="hover:text-orange transition-colors">
+                  +34 928 077 079 <span className="text-white/25 text-xs">(Gran Canaria)</span>
+                </a>
+              </li>
+              <li className="flex items-center gap-1.5 pt-1">
+                <WhatsAppIcon className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                <a href="https://wa.me/34950091011" target="_blank" rel="noopener noreferrer" className="text-green-400/70 hover:text-green-400 transition-colors">
+                  +34 950 09 10 11
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Email */}
+          <div>
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-widest flex items-center gap-2">
+              <MailIcon className="w-3.5 h-3.5 text-orange" />
+              Email
+            </h4>
+            <ul className="space-y-2.5 text-sm text-white/40">
+              <li>
+                <a href="mailto:hola@buzzalarmas.com" className="hover:text-orange transition-colors break-all">
                   hola@buzzalarmas.com
                 </a>
               </li>
-              <li>Canary Islands · Alicante</li>
               <li>
-                <a href="#contact" className="hover:text-orange transition-colors">
+                <a href="mailto:administracion@buzzalarmas.com" className="hover:text-orange transition-colors break-all">
+                  administracion@buzzalarmas.com
+                </a>
+              </li>
+              <li className="pt-2">
+                <a href="#contact" className="text-orange hover:text-orange-dark font-medium transition-colors">
                   {t("nav.cta")} →
                 </a>
               </li>

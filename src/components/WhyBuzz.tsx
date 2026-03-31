@@ -2,39 +2,28 @@
 
 import { motion } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
+import { SirenIcon, StarIcon, WifiIcon, AwardIcon } from "@/components/Icons";
 
 const reasons = [
-  {
-    icon: "🚔",
-    titleKey: "why.police.title",
-    descKey: "why.police.desc",
-  },
-  {
-    icon: "⭐",
-    titleKey: "why.service.title",
-    descKey: "why.service.desc",
-  },
-  {
-    icon: "📶",
-    titleKey: "why.wireless.title",
-    descKey: "why.wireless.desc",
-  },
-  {
-    icon: "🛡️",
-    titleKey: "why.experience.title",
-    descKey: "why.experience.desc",
-  },
+  { Icon: SirenIcon, titleKey: "why.police.title", descKey: "why.police.desc" },
+  { Icon: StarIcon, titleKey: "why.service.title", descKey: "why.service.desc" },
+  { Icon: WifiIcon, titleKey: "why.wireless.title", descKey: "why.wireless.desc" },
+  { Icon: AwardIcon, titleKey: "why.experience.title", descKey: "why.experience.desc" },
 ];
 
 export default function WhyBuzz() {
   const { t } = useLang();
 
   return (
-    <section id="why" className="py-24 bg-dark relative overflow-hidden">
-      {/* Accent line */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-orange to-transparent" />
+    <section id="why" className="py-24 relative overflow-hidden">
+      {/* Gradient background: dark left to deep-orange-tinted right */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-[#110800]" />
+      {/* Orange glow bottom-right */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-orange/8 rounded-full blur-[100px] pointer-events-none" />
+      {/* Top separator line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange/30 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: text */}
           <motion.div
@@ -51,7 +40,7 @@ export default function WhyBuzz() {
 
             <a
               href="#contact"
-              className="inline-flex bg-orange hover:bg-orange-dark text-white font-bold px-8 py-4 rounded-full transition-all duration-200 shadow-lg shadow-orange/30"
+              className="inline-flex items-center gap-3 bg-orange hover:bg-orange-dark text-white font-bold px-8 py-4 rounded-full transition-all duration-200 shadow-lg shadow-orange/30 hover:shadow-orange/50"
             >
               {t("nav.cta")}
             </a>
@@ -59,20 +48,20 @@ export default function WhyBuzz() {
 
           {/* Right: cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {reasons.map((r, i) => (
+            {reasons.map(({ Icon, titleKey, descKey }, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-dark-2 border border-white/5 rounded-2xl p-6"
+                className="bg-dark-2/80 border border-white/5 hover:border-orange/30 rounded-2xl p-6 transition-all duration-300"
               >
-                <div className="text-3xl mb-3">{r.icon}</div>
-                <h3 className="text-white font-bold mb-2">{t(r.titleKey)}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">
-                  {t(r.descKey)}
-                </p>
+                <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-orange" />
+                </div>
+                <h3 className="text-white font-bold mb-2">{t(titleKey)}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{t(descKey)}</p>
               </motion.div>
             ))}
           </div>

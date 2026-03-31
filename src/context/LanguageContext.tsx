@@ -198,6 +198,42 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "Algo salió mal. Por favor inténtalo de nuevo o llámanos directamente.",
   },
 
+  // Stats
+  "stats.years": { en: "Years Experience", es: "Años de experiencia" },
+  "stats.islands": { en: "Islands Covered", es: "Islas cubiertas" },
+  "stats.monitoring": { en: "Monitoring", es: "Vigilancia" },
+  "stats.wireless": { en: "Wireless", es: "Inalámbrico" },
+
+  // Urgency
+  "urgency.title": { en: "Don't Wait for the Worst", es: "No esperes lo peor" },
+  "urgency.sub": {
+    en: "In Spain, property crime and illegal occupation are growing threats. The right alarm system is your best defence.",
+    es: "En España, los robos y la okupación ilegal son amenazas crecientes. El sistema de alarma adecuado es tu mejor defensa.",
+  },
+  "urgency.robbery.title": { en: "Burglary & Robbery", es: "Robo e Irrupción" },
+  "urgency.robbery.desc": {
+    en: "Spain records thousands of home break-ins every year. Most happen when a property looks unprotected — a visible alarm system is a proven deterrent.",
+    es: "España registra miles de robos en domicilios cada año. La mayoría ocurren cuando la propiedad parece desprotegida — un sistema de alarma visible es un disuasor demostrado.",
+  },
+  "urgency.squatter.title": { en: "Illegal Occupation (Okupa)", es: "Ocupación Ilegal (Okupa)" },
+  "urgency.squatter.desc": {
+    en: "Squatters can take over an unoccupied property in hours. Our specialised alerts notify you the moment anyone enters — giving you time to act.",
+    es: "Los okupas pueden tomar una propiedad desocupada en horas. Nuestras alertas especializadas te avisan en el momento en que alguien entra — dándote tiempo de actuar.",
+  },
+  "urgency.solution.title": { en: "Buzz Alarmas Is the Solution", es: "Buzz Alarmas es la solución" },
+  "urgency.solution.desc": {
+    en: "Police response, 24/7 monitoring, wireless installation, and the best customer service on the islands. Protect your property — and your peace of mind.",
+    es: "Respuesta policial, vigilancia 24/7, instalación inalámbrica y el mejor servicio al cliente de las islas. Protege tu propiedad y tu tranquilidad.",
+  },
+  "urgency.cta.title": { en: "Get Protected Today", es: "Protégete hoy" },
+  "urgency.cta.sub": {
+    en: "Free consultation. No obligation. Installation included.",
+    es: "Consulta gratuita. Sin compromiso. Instalación incluida.",
+  },
+
+  // Contact info
+  "contact.reach": { en: "Reach Us Directly", es: "Contáctanos directamente" },
+
   // Footer
   "footer.tagline": {
     en: "Real Protection. Real Response.",

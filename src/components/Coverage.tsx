@@ -2,13 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
+import { MapPinIcon } from "@/components/Icons";
 
 export default function Coverage() {
   const { t } = useLang();
 
   return (
-    <section id="coverage" className="py-24 bg-dark-2">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="coverage" className="py-24 relative overflow-hidden">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark-2 via-dark to-dark-2" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange/20 to-transparent" />
+
+      <div className="relative max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,15 +38,19 @@ export default function Coverage() {
             transition={{ duration: 0.6 }}
             className="bg-dark-3 border border-orange/20 rounded-2xl p-8"
           >
-            <div className="text-5xl mb-4">🏝️</div>
-            <h3 className="text-2xl font-black text-white mb-2">
-              {t("coverage.canary")}
-            </h3>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                <MapPinIcon className="w-5 h-5 text-orange" />
+              </div>
+              <h3 className="text-2xl font-black text-white">
+                {t("coverage.canary")}
+              </h3>
+            </div>
             <div className="w-10 h-0.5 bg-orange mb-4 rounded-full" />
-            <p className="text-white/50 text-sm leading-relaxed">
+            <p className="text-white/50 text-sm leading-relaxed mb-6">
               {t("coverage.canary.desc")}
             </p>
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {[
                 "Tenerife",
                 "Gran Canaria",
@@ -70,15 +79,19 @@ export default function Coverage() {
             transition={{ duration: 0.6 }}
             className="bg-dark-3 border border-orange/20 rounded-2xl p-8"
           >
-            <div className="text-5xl mb-4">🌞</div>
-            <h3 className="text-2xl font-black text-white mb-2">
-              {t("coverage.alicante")}
-            </h3>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                <MapPinIcon className="w-5 h-5 text-orange" />
+              </div>
+              <h3 className="text-2xl font-black text-white">
+                {t("coverage.alicante")}
+              </h3>
+            </div>
             <div className="w-10 h-0.5 bg-orange mb-4 rounded-full" />
-            <p className="text-white/50 text-sm leading-relaxed">
+            <p className="text-white/50 text-sm leading-relaxed mb-6">
               {t("coverage.alicante.desc")}
             </p>
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {[
                 "Alicante",
                 "Benidorm",

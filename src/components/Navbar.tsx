@@ -35,9 +35,9 @@ export default function Navbar() {
           <Image
             src="/images/logo-white.png"
             alt="Buzz Alarmas"
-            width={140}
-            height={50}
-            className="h-10 w-auto object-contain"
+            width={200}
+            height={70}
+            className="h-14 w-auto object-contain"
             priority
           />
         </a>
