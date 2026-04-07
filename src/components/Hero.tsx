@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useLang } from "@/context/LanguageContext";
 
 export default function Hero() {
@@ -23,16 +24,21 @@ export default function Hero() {
       {/* Orange glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Hero image placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark z-10" />
-
       {/*
-        PHOTO GUIDE: To add a background photo to the hero:
-        1. Save your image to /public/images/hero-bg.jpg
-        2. Replace the <div className="absolute inset-0 bg-dark"> above with:
-           <Image src="/images/hero-bg.jpg" alt="Hero" fill className="object-cover opacity-30" priority />
-        3. Make sure to import Image from "next/image"
+        HERO PHOTO: Drop public/images/hero-bg.jpg into the project and it appears automatically.
+        Recommended: 1920×1080px JPG, under 300KB. See PHOTOS.md for details.
       */}
+      <Image
+        src="/images/hero-bg.jpg"
+        alt="Buzz Alarmas — professional alarm installation"
+        fill
+        className="object-cover opacity-25"
+        priority
+        onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+      />
+
+      {/* Dark gradient overlay — keeps text readable over the photo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/50 to-dark z-10" />
 
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-center">
         {/* Badge */}
@@ -59,7 +65,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black text-orange leading-none tracking-tight mb-6"
+          className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-6 bg-gradient-to-r from-orange via-amber-400 to-orange bg-clip-text text-transparent"
         >
           {t("hero.tagline2")}
         </motion.h1>

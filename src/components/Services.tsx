@@ -46,10 +46,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-dark-3 border border-white/5 hover:border-orange/50 rounded-2xl p-8 transition-all duration-300"
+              className="group bg-dark-3 border border-white/5 hover:border-orange/50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10"
             >
               {/* Icon circle */}
-              <div className="w-12 h-12 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange/15 to-amber-400/10 border border-orange/20 flex items-center justify-center mb-5 group-hover:from-orange/25 group-hover:to-amber-400/20 transition-all duration-300">
                 <Icon className="w-5 h-5 text-orange" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange transition-colors duration-200">
