@@ -80,3 +80,41 @@ The site will pick it up automatically on next deploy — no code changes needed
 | WhyBuzz team  | `team.jpg`              | 800×600px     | 200KB    |
 
 **Tip:** Use [Squoosh](https://squoosh.app) (free, in-browser) to compress photos before uploading.
+
+---
+
+## 3. Favicon (browser tab icon)
+
+**What it does:** The small icon shown in the browser tab, bookmarks, and mobile home screen shortcuts.
+
+**Current state:** The site uses the white logo as favicon — this can be hard to see on light browser themes.
+
+**How to add a proper favicon:**
+
+1. Create a square version of the Buzz Alarmas logo — ideally the icon/mark only (not the full wordmark), on a dark or orange background. Minimum 512×512px PNG.
+2. Go to [favicon.io](https://favicon.io/favicon-converter/) or [realfavicongenerator.net](https://realfavicongenerator.net) — upload your square logo image and download the generated package.
+3. From the downloaded package, copy these files into `public/`:
+   - `favicon.ico`
+   - `favicon-32x32.png`
+   - `favicon-16x16.png`
+   - `apple-touch-icon.png` (180×180px)
+4. Open `src/app/layout.tsx` and update the `icons` block:
+   ```tsx
+   icons: {
+     icon: [
+       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+     ],
+     apple: "/apple-touch-icon.png",
+     shortcut: "/favicon.ico",
+   },
+   ```
+
+**Size reference:**
+
+| File                  | Size        | Purpose                        |
+|-----------------------|-------------|--------------------------------|
+| `favicon.ico`         | 32×32px     | Browser tab fallback           |
+| `favicon-16x16.png`   | 16×16px     | Small browser tabs             |
+| `favicon-32x32.png`   | 32×32px     | High-DPI browser tabs          |
+| `apple-touch-icon.png`| 180×180px   | iOS home screen shortcut       |
