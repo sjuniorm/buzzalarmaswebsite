@@ -256,6 +256,21 @@ const translations: Record<string, Record<Lang, string>> = {
   // Contact info
   "contact.reach": { en: "Reach Us Directly", es: "Contáctanos directamente" },
 
+  // FAQ
+  "nav.faq": { en: "FAQ", es: "Preguntas" },
+  "faq.title": { en: "Frequently Asked Questions", es: "Preguntas frecuentes" },
+  "faq.sub": {
+    en: "Everything you need to know before getting started",
+    es: "Todo lo que necesitas saber antes de empezar",
+  },
+  "faq.cta.text": {
+    en: "Still have questions? We're happy to help.",
+    es: "¿Todavía tienes dudas? Estamos aquí para ayudarte.",
+  },
+
+  // WhatsApp floating button
+  "whatsapp.label": { en: "Chat on WhatsApp", es: "Escríbenos por WhatsApp" },
+
   // Footer
   "footer.tagline": {
     en: "Real Protection. Real Response.",
@@ -271,7 +286,7 @@ const translations: Record<string, Record<Lang, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>("es");
 
   const toggleLang = () => setLang((l) => (l === "en" ? "es" : "en"));
 

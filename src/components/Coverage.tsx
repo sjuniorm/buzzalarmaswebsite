@@ -29,6 +29,34 @@ export default function Coverage() {
           <div className="w-16 h-1 bg-orange mx-auto mt-6 rounded-full" />
         </motion.div>
 
+        {/* Google Maps embed */}
+        {/*
+          HOW TO USE YOUR OWN MAP:
+          1. Go to your Google Business Profile (business.google.com)
+          2. Click "Share" → "Embed a map" → copy the iframe src URL
+          3. Replace the src below with your URL
+          Current placeholder shows the Canary Islands region.
+        */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden border border-white/10"
+          style={{ height: 320 }}
+        >
+          <iframe
+            src="https://maps.google.com/maps?q=Tenerife,+Canary+Islands,+Spain&output=embed&z=8"
+            width="100%"
+            height="100%"
+            style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Buzz Alarmas coverage area"
+          />
+        </motion.div>
+
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Canary Islands */}
           <motion.div

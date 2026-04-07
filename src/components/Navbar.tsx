@@ -20,6 +20,7 @@ export default function Navbar() {
     { label: t("nav.why"), href: "#why" },
     { label: t("nav.how"), href: "#how" },
     { label: t("nav.reviews"), href: "#reviews" },
+    { label: t("nav.faq"), href: "#faq" },
     { label: t("nav.contact"), href: "#contact" },
   ];
 

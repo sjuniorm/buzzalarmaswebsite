@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Professional alarm systems for homes and businesses. 24/7 monitoring with police response.",
     siteName: "Buzz Alarmas",
-    locale: "en_US",
+    locale: "es_ES",
     type: "website",
   },
 };
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} scroll-smooth`}>
+    <html lang="es" className={`${geistSans.variable} scroll-smooth`}>
       <body className="bg-dark text-light antialiased">{children}</body>
     </html>
   );
