@@ -65,7 +65,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-6 bg-gradient-to-r from-orange via-amber-400 to-orange bg-clip-text text-transparent"
+          className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-6 bg-gradient-to-r from-[#ff914d] via-[#e65a1e] to-[#ff914d] bg-clip-text text-transparent animate-gradient-text"
         >
           {t("hero.tagline2")}
         </motion.h1>

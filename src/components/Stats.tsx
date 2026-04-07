@@ -59,7 +59,7 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-6xl font-black leading-none mb-2 bg-gradient-to-br from-orange to-amber-400 bg-clip-text text-transparent">
+              <div className="text-5xl md:text-6xl font-black leading-none mb-2 bg-gradient-to-br from-[#ff914d] to-[#e65a1e] bg-clip-text text-transparent">
                 {display ? (
                   display
                 ) : (
