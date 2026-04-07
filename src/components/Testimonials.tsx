@@ -69,6 +69,28 @@ export default function Testimonials() {
           <div className="w-16 h-1 bg-orange mx-auto mt-6 rounded-full" />
         </motion.div>
 
+        {/* Google Reviews CTA */}
+        {/*
+          HOW TO UPDATE: replace the href below with your Google Business profile URL.
+          Find it by searching your business on Google → click "Write a review" → copy the URL.
+        */}
+        <div className="flex justify-center mb-12">
+          <a
+            href="https://www.google.com/search?q=Buzz+Alarmas+Tenerife"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-dark-2 hover:bg-dark-3 border border-white/10 hover:border-white/20 text-white/70 hover:text-white px-6 py-3 rounded-full transition-all duration-200 text-sm font-medium"
+          >
+            <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="none">
+              <path d="M21.805 10.023H12v3.977h5.62c-.24 1.36-1 2.51-2.12 3.28v2.73h3.44c2.01-1.85 3.17-4.58 3.17-7.99 0-.63-.06-1.24-.15-1.99z" fill="#4285F4" />
+              <path d="M12 22c2.97 0 5.46-.98 7.28-2.66l-3.44-2.73c-.96.64-2.19 1.02-3.84 1.02-2.95 0-5.45-1.99-6.34-4.66H2.12v2.82C3.93 19.98 7.7 22 12 22z" fill="#34A853" />
+              <path d="M5.66 13.97A6.03 6.03 0 0 1 5.34 12c0-.68.12-1.35.32-1.97V7.21H2.12A9.96 9.96 0 0 0 2 12c0 1.61.39 3.13 1.07 4.49l2.59-2.52z" fill="#FBBC05" />
+              <path d="M12 5.34c1.66 0 3.15.57 4.32 1.69l3.25-3.25C17.46 1.98 14.97 1 12 1 7.7 1 3.93 3.02 2.12 6.21l3.54 2.76C6.55 7.33 9.05 5.34 12 5.34z" fill="#EA4335" />
+            </svg>
+            {t("testimonials.google.cta")}
+          </a>
+        </div>
+
         {/* Reviews grid */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {reviews.map((review, i) => (

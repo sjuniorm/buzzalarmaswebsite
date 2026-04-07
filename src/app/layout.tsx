@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -8,18 +9,22 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Buzz Alarmas | Real Protection. Real Response.",
+  title: "Buzz Alarmas | Protección Real. Respuesta Real.",
   description:
-    "Professional alarm systems for homes and businesses across the Canary Islands and Alicante. 24/7 monitoring, police response, and the best customer service.",
+    "Sistemas de alarma profesionales para hogares y negocios en las Islas Canarias y Alicante. Vigilancia 24/7, respuesta policial y el mejor servicio al cliente. Instalación gratuita.",
   keywords:
-    "alarm systems, security, canary islands, alicante, burglar alarm, CCTV, intruder alarm, squatter alarm",
+    "alarmas, seguridad, islas canarias, alicante, alarma hogar, alarma negocio, antiokupa, detección incendio, central receptora, 24 horas, tenerife, gran canaria, lanzarote",
   openGraph: {
-    title: "Buzz Alarmas | Real Protection. Real Response.",
+    title: "Buzz Alarmas | Protección Real. Respuesta Real.",
     description:
-      "Professional alarm systems for homes and businesses. 24/7 monitoring with police response.",
+      "Sistemas de alarma profesionales para hogares y negocios. Vigilancia 24/7 con respuesta policial. Instalación gratuita.",
     siteName: "Buzz Alarmas",
     locale: "es_ES",
     type: "website",
+  },
+  icons: {
+    icon: "/images/logo-white.png",
+    apple: "/images/logo-white.png",
   },
 };
 
@@ -30,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${geistSans.variable} scroll-smooth`}>
-      <body className="bg-dark text-light antialiased">{children}</body>
+      <body className="bg-dark text-light antialiased">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }

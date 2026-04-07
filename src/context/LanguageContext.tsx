@@ -173,6 +173,16 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "No te fíes solo de nuestra palabra",
   },
   "testimonials.google": { en: "Google Review", es: "Reseña de Google" },
+  "testimonials.google.cta": { en: "See all reviews on Google", es: "Ver todas las opiniones en Google" },
+
+  // Cookie banner
+  "cookie.text": {
+    en: "We use cookies to improve your browsing experience and analyse traffic. By clicking Accept you consent to our use of cookies. For more information, see our",
+    es: "Utilizamos cookies para mejorar tu experiencia de navegación y analizar el tráfico. Al hacer clic en Aceptar, consientes el uso de cookies. Para más información, consulta nuestra",
+  },
+  "cookie.link": { en: "Privacy Policy", es: "Política de Privacidad" },
+  "cookie.accept": { en: "Accept", es: "Aceptar" },
+  "cookie.reject": { en: "Reject", es: "Rechazar" },
 
   // Coverage
   "coverage.title": { en: "Where We Operate", es: "Dónde operamos" },
@@ -281,6 +291,8 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "Todos los derechos reservados.",
   },
   "footer.certified": { en: "R.N.S.P. Certified · DGP 4557", es: "Certificados R.N.S.P. · DGP 4557" },
+  "footer.privacy": { en: "Privacy Policy", es: "Política de Privacidad" },
+  "footer.terms": { en: "Terms & Conditions", es: "Términos y Condiciones" },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
