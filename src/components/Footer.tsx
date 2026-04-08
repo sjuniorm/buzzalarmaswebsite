@@ -129,16 +129,14 @@ export default function Footer() {
                 <span className="text-white/40 text-sm group-hover:text-orange transition-colors">+34 902 099 910</span>
                 <span className="text-white/20 text-xs ml-auto">Principal</span>
               </a>
-              <a href="tel:+34922099200" className="flex items-center gap-3 group">
-                <PhoneIcon className="w-4 h-4 text-white/20 shrink-0" />
-                <span className="text-white/40 text-sm group-hover:text-orange transition-colors">+34 922 099 200</span>
-                <span className="text-white/20 text-xs ml-auto">Tenerife</span>
-              </a>
-              <a href="tel:+34928077079" className="flex items-center gap-3 group">
-                <PhoneIcon className="w-4 h-4 text-white/20 shrink-0" />
-                <span className="text-white/40 text-sm group-hover:text-orange transition-colors">+34 928 077 079</span>
-                <span className="text-white/20 text-xs ml-auto">Canarias</span>
-              </a>
+              <div className="flex items-start gap-3">
+                <PhoneIcon className="w-4 h-4 text-white/20 shrink-0 mt-0.5" />
+                <div className="flex-1 min-w-0">
+                  <a href="tel:+34922099200" className="block text-white/40 text-sm hover:text-orange transition-colors">+34 922 099 200</a>
+                  <a href="tel:+34928077079" className="block text-white/40 text-sm hover:text-orange transition-colors">+34 928 077 079</a>
+                </div>
+                <span className="text-white/20 text-xs mt-0.5">Canarias</span>
+              </div>
 
               <div className="h-px bg-white/5 my-3" />
 
