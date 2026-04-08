@@ -37,8 +37,8 @@ export default function Navbar() {
         scrolled ? "bg-dark/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
-      {/* Scroll progress bar */}
-      <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#ff914d] to-[#e65a1e] transition-all duration-100 z-10"
+      {/* Scroll progress bar — subtle 1px line */}
+      <div className="absolute bottom-0 left-0 h-px bg-orange/50 transition-[width] duration-150 z-10"
         style={{ width: `${progress}%` }}
       />
       <nav className="max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-4 flex items-center justify-between">
