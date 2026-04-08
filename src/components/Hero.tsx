@@ -32,7 +32,7 @@ export default function Hero() {
         src="/images/header-website.png"
         alt="Buzz Alarmas — professional alarm installation"
         fill
-        className="object-cover opacity-25"
+        className="object-cover object-left md:object-center opacity-25"
         priority
         onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
       />
