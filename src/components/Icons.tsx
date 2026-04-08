@@ -248,3 +248,14 @@ export function KeyIcon({ className = "w-6 h-6" }: IconProps) {
     </svg>
   );
 }
+
+export function RadarIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+      <path d="M5.7 5.7a8 8 0 1 0 11.31 0" />
+      <path d="M8.5 8.5a5 5 0 1 0 7.07 0" />
+      <path d="M12 12l3.5-3.5" />
+    </svg>
+  );
+}

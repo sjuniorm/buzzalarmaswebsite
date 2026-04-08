@@ -8,7 +8,7 @@ const reviews = [
     name: "Eamonn Power",
     badge: "Local Guide · 37 reviews",
     stars: 5,
-    text: "We had someone come to our new house to install a new system. They were super helpful in explaining everything. The work was completely flawless. Everything was operational and working through their app within an hour. Thank you so much for everything — well done on a great job! ✌🏻",
+    text: "We had someone come to our new house to install a new system. They were super helpful in explaining everything. The work was completely flawless. Everything was operational and working through their app within an hour. Thank you so much for everything, well done on a great job!",
   },
   {
     name: "Bernie Wagner",
@@ -32,15 +32,24 @@ const reviews = [
     name: "Adam Warchol",
     badge: "Google Review",
     stars: 5,
-    text: "Amazing service — very quick with the installation, explained everything clearly and were great to chat with. Feel much safer now and would totally recommend!",
+    text: "Amazing service, very quick with the installation, explained everything clearly and were great to chat with. Feel much safer now and would totally recommend!",
   },
 ];
+
+const GoogleIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="none">
+    <path d="M21.805 10.023H12v3.977h5.62c-.24 1.36-1 2.51-2.12 3.28v2.73h3.44c2.01-1.85 3.17-4.58 3.17-7.99 0-.63-.06-1.24-.15-1.99z" fill="#4285F4" />
+    <path d="M12 22c2.97 0 5.46-.98 7.28-2.66l-3.44-2.73c-.96.64-2.19 1.02-3.84 1.02-2.95 0-5.45-1.99-6.34-4.66H2.12v2.82C3.93 19.98 7.7 22 12 22z" fill="#34A853" />
+    <path d="M5.66 13.97A6.03 6.03 0 0 1 5.34 12c0-.68.12-1.35.32-1.97V7.21H2.12A9.96 9.96 0 0 0 2 12c0 1.61.39 3.13 1.07 4.49l2.59-2.52z" fill="#FBBC05" />
+    <path d="M12 5.34c1.66 0 3.15.57 4.32 1.69l3.25-3.25C17.46 1.98 14.97 1 12 1 7.7 1 3.93 3.02 2.12 6.21l3.54 2.76C6.55 7.33 9.05 5.34 12 5.34z" fill="#EA4335" />
+  </svg>
+);
 
 function Stars({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} className="w-4 h-4 text-orange fill-current" viewBox="0 0 20 20">
+        <svg key={i} className="w-3.5 h-3.5 text-orange fill-current" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
       ))}
@@ -53,14 +62,15 @@ export default function Testimonials() {
 
   return (
     <section id="reviews" className="py-24 bg-dark">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-14"
         >
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             {t("testimonials.title")}
@@ -69,74 +79,68 @@ export default function Testimonials() {
           <div className="w-16 h-1 bg-orange mx-auto mt-6 rounded-full" />
         </motion.div>
 
-        {/* Google Reviews CTA */}
+        {/* Reviews grid — 3 on top, 2 centred below */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+          {reviews.slice(0, 3).map((review, i) => (
+            <ReviewCard key={i} review={review} delay={i * 0.08} />
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto">
+          {reviews.slice(3).map((review, i) => (
+            <ReviewCard key={i + 3} review={review} delay={(i + 3) * 0.08} />
+          ))}
+        </div>
+
+        {/* Google CTA */}
         {/*
-          HOW TO UPDATE: replace the href below with your Google Business profile URL.
-          Find it by searching your business on Google → click "Write a review" → copy the URL.
+          HOW TO UPDATE: replace the href with your Google Business profile URL.
+          Search your business on Google, click "Write a review", copy the URL.
         */}
-        <div className="flex justify-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex justify-center mt-12"
+        >
           <a
             href="https://www.google.com/search?q=Buzz+Alarmas+Tenerife"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-dark-2 hover:bg-dark-3 border border-white/10 hover:border-white/20 text-white/70 hover:text-white px-6 py-3 rounded-full transition-all duration-200 text-sm font-medium"
+            className="inline-flex items-center gap-3 bg-dark-2 hover:bg-dark-3 border border-white/10 hover:border-white/20 text-white/60 hover:text-white px-6 py-3 rounded-full transition-all duration-200 text-sm font-medium"
           >
-            <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="none">
-              <path d="M21.805 10.023H12v3.977h5.62c-.24 1.36-1 2.51-2.12 3.28v2.73h3.44c2.01-1.85 3.17-4.58 3.17-7.99 0-.63-.06-1.24-.15-1.99z" fill="#4285F4" />
-              <path d="M12 22c2.97 0 5.46-.98 7.28-2.66l-3.44-2.73c-.96.64-2.19 1.02-3.84 1.02-2.95 0-5.45-1.99-6.34-4.66H2.12v2.82C3.93 19.98 7.7 22 12 22z" fill="#34A853" />
-              <path d="M5.66 13.97A6.03 6.03 0 0 1 5.34 12c0-.68.12-1.35.32-1.97V7.21H2.12A9.96 9.96 0 0 0 2 12c0 1.61.39 3.13 1.07 4.49l2.59-2.52z" fill="#FBBC05" />
-              <path d="M12 5.34c1.66 0 3.15.57 4.32 1.69l3.25-3.25C17.46 1.98 14.97 1 12 1 7.7 1 3.93 3.02 2.12 6.21l3.54 2.76C6.55 7.33 9.05 5.34 12 5.34z" fill="#EA4335" />
-            </svg>
+            <GoogleIcon />
             {t("testimonials.google.cta")}
           </a>
-        </div>
-
-        {/* Reviews grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {reviews.map((review, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="break-inside-avoid bg-dark-2 border border-white/5 rounded-2xl p-6"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <p className="text-white font-bold">{review.name}</p>
-                  <p className="text-white/30 text-xs mt-0.5">{review.badge}</p>
-                </div>
-                {/* Google G icon */}
-                <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0" fill="none">
-                  <path
-                    d="M21.805 10.023H12v3.977h5.62c-.24 1.36-1 2.51-2.12 3.28v2.73h3.44c2.01-1.85 3.17-4.58 3.17-7.99 0-.63-.06-1.24-.15-1.99z"
-                    fill="#4285F4"
-                  />
-                  <path
-                    d="M12 22c2.97 0 5.46-.98 7.28-2.66l-3.44-2.73c-.96.64-2.19 1.02-3.84 1.02-2.95 0-5.45-1.99-6.34-4.66H2.12v2.82C3.93 19.98 7.7 22 12 22z"
-                    fill="#34A853"
-                  />
-                  <path
-                    d="M5.66 13.97A6.03 6.03 0 0 1 5.34 12c0-.68.12-1.35.32-1.97V7.21H2.12A9.96 9.96 0 0 0 2 12c0 1.61.39 3.13 1.07 4.49l2.59-2.52z"
-                    fill="#FBBC05"
-                  />
-                  <path
-                    d="M12 5.34c1.66 0 3.15.57 4.32 1.69l3.25-3.25C17.46 1.98 14.97 1 12 1 7.7 1 3.93 3.02 2.12 6.21l3.54 2.76C6.55 7.33 9.05 5.34 12 5.34z"
-                    fill="#EA4335"
-                  />
-                </svg>
-              </div>
-
-              <Stars count={review.stars} />
-
-              <p className="text-white/60 text-sm leading-relaxed mt-3">
-                &ldquo;{review.text}&rdquo;
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        </motion.div>
       </div>
     </section>
+  );
+}
+
+function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
+      className="bg-dark-2 border border-white/5 rounded-2xl p-6 flex flex-col gap-3"
+    >
+      {/* Top row: name + Google icon */}
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <p className="text-white font-semibold text-sm">{review.name}</p>
+          <p className="text-white/30 text-xs mt-0.5">{review.badge}</p>
+        </div>
+        <GoogleIcon />
+      </div>
+
+      <Stars count={review.stars} />
+
+      <p className="text-white/55 text-sm leading-relaxed">
+        &ldquo;{review.text}&rdquo;
+      </p>
+    </motion.div>
   );
 }

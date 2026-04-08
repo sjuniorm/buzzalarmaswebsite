@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 
 type Phase = "setup" | "alert" | "response" | "resolved";
@@ -372,8 +372,15 @@ const PHASE_PROGRESS: Record<Phase, string> = {
 export default function HowItWorks() {
   const { t, lang } = useLang();
   const [current, setCurrent] = useState(0);
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   const touchStartX = useRef(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const inView = useInView(sectionRef, { once: true, margin: "-15%" });
+
+  // Start playing only when the section scrolls into view
+  useEffect(() => {
+    if (inView) setPlaying(true);
+  }, [inView]);
 
   const step = stepData[current];
   const SceneComp = SCENES[current];
@@ -399,7 +406,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section id="how" className="py-24 bg-dark-2 relative overflow-hidden">
+    <section id="how" ref={sectionRef} className="py-24 bg-dark-2 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">

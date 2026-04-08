@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 
 const stats = [
-  { value: 20, suffix: "+", display: null, labelKey: "stats.years" },
+  { value: 30, suffix: "+", display: null, labelKey: "stats.years" },
   { value: 8,  suffix: "",  display: null, labelKey: "stats.islands" },
   { value: null, suffix: "", display: "24/7", labelKey: "stats.monitoring" },
   { value: 100, suffix: "%", display: null, labelKey: "stats.wireless" },

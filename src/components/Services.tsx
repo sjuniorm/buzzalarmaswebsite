@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
-import { HomeIcon, BuildingIcon, EyeIcon, SmartphoneIcon, LockIcon, FlameIcon } from "@/components/Icons";
+import { HomeIcon, BuildingIcon, EyeIcon, SmartphoneIcon, LockIcon, FlameIcon, RadarIcon, CameraIcon } from "@/components/Icons";
 
 const services = [
   { Icon: HomeIcon, titleKey: "services.home.title", descKey: "services.home.desc" },
@@ -11,6 +11,8 @@ const services = [
   { Icon: SmartphoneIcon, titleKey: "services.app.title", descKey: "services.app.desc" },
   { Icon: LockIcon, titleKey: "services.squatter.title", descKey: "services.squatter.desc" },
   { Icon: FlameIcon, titleKey: "services.fire.title", descKey: "services.fire.desc" },
+  { Icon: RadarIcon, titleKey: "services.outdoor.title", descKey: "services.outdoor.desc" },
+  { Icon: CameraIcon, titleKey: "services.cctv.title", descKey: "services.cctv.desc" },
 ];
 
 export default function Services() {
@@ -61,6 +63,17 @@ export default function Services() {
             </motion.div>
           ))}
         </div>
+
+        {/* Ajax system lowkey mention */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center text-white/25 text-xs mt-12"
+        >
+          {t("services.ajax")}
+        </motion.p>
       </div>
     </section>
   );

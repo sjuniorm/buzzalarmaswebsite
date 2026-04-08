@@ -34,7 +34,7 @@ const translations: Record<string, Record<Lang, string>> = {
   "hero.cta2": { en: "See Our Services", es: "Ver servicios" },
 
   // Trust Bar
-  "trust.years": { en: "20+ Years Experience", es: "20+ años de experiencia" },
+  "trust.years": { en: "30+ Years Experience", es: "30+ años de experiencia" },
   "trust.monitoring": { en: "24/7 Monitoring", es: "Vigilancia 24/7" },
   "trust.police": { en: "Police Response", es: "Respuesta policial" },
   "trust.certified": { en: "R.N.S.P. Certified", es: "Certificados R.N.S.P." },
@@ -56,8 +56,8 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "Alarmas para negocios",
   },
   "services.business.desc": {
-    en: "Commercial-grade security tailored to your premises. Grade 3 certified systems.",
-    es: "Seguridad comercial adaptada a tus instalaciones. Sistemas con certificación Grado 3.",
+    en: "Commercial-grade security tailored to your premises. Grade 3 certified systems available for high-security requirements.",
+    es: "Seguridad comercial adaptada a tus instalaciones. Sistemas con certificación Grado 3 disponibles para requisitos de alta seguridad.",
   },
   "services.monitoring.title": { en: "24/7 Monitoring", es: "Central de alarmas" },
   "services.monitoring.desc": {
@@ -77,6 +77,10 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Specially designed alerts for vacant properties. Stop squatters before they settle in.",
     es: "Alertas especialmente diseñadas para propiedades vacías. Para a los okupas antes de que entren.",
   },
+  "services.ajax": {
+    en: "Powered by Ajax Systems technology",
+    es: "Con tecnología Ajax Systems",
+  },
   "services.fire.title": {
     en: "Fire & Smoke Detection",
     es: "Detección de incendio y humo",
@@ -84,6 +88,22 @@ const translations: Record<string, Record<Lang, string>> = {
   "services.fire.desc": {
     en: "Wireless smoke detectors integrated into your alarm system for full peace of mind.",
     es: "Detectores de humo inalámbricos integrados en tu sistema de alarma.",
+  },
+  "services.outdoor.title": {
+    en: "Outdoor Perimeter Detection",
+    es: "Detección perimetral exterior",
+  },
+  "services.outdoor.desc": {
+    en: "Protect your property before anyone reaches the door. Outdoor sensors detect movement around your perimeter and trigger the alarm before an intruder gets inside.",
+    es: "Protege tu propiedad antes de que nadie llegue a la puerta. Los sensores exteriores detectan movimiento en el perímetro y activan la alarma antes de que un intruso entre.",
+  },
+  "services.cctv.title": {
+    en: "CCTV with AI Detection",
+    es: "CCTV con detección por IA",
+  },
+  "services.cctv.desc": {
+    en: "Cameras fully integrated with your alarm system and controlled from the same app. AI-powered detection distinguishes between people, pets and vehicles, so you only get alerts that matter.",
+    es: "Cámaras totalmente integradas con tu sistema de alarma y controladas desde la misma app. La detección por inteligencia artificial distingue entre personas, mascotas y vehículos, para que solo recibas alertas que importan.",
   },
 
   // Why Buzz
@@ -106,20 +126,20 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "Nuestros clientes lo dicen mejor: rápidos, amables y profesionales desde la primera llamada.",
   },
   "why.wireless.title": {
-    en: "100% Wireless",
-    es: "100% inalámbrico",
+    en: "Wireless Systems",
+    es: "Sistemas inalámbricos",
   },
   "why.wireless.desc": {
-    en: "No drilling through walls. Our systems are clean, fast to install and easy to move if you do.",
-    es: "Sin taladros en las paredes. Nuestros sistemas son limpios, rápidos de instalar y fáciles de mover.",
+    en: "All our equipment is wireless. Some sensors require minimal fixing to the wall, but there are no cables or trunking. Clean, fast to install and easy to move if needed.",
+    es: "Todo nuestro equipamiento es inalámbrico. Algunos sensores requieren una fijación mínima a la pared, pero sin cables ni canaletas. Limpio, rápido de instalar y fácil de trasladar si es necesario.",
   },
   "why.experience.title": {
-    en: "20+ Years in Security",
-    es: "20+ años en seguridad",
+    en: "30+ Years in Security",
+    es: "30+ años en seguridad",
   },
   "why.experience.desc": {
-    en: "Over two decades protecting homes and businesses. We know security inside out.",
-    es: "Más de dos décadas protegiendo hogares y negocios. Conocemos la seguridad por dentro y por fuera.",
+    en: "Over three decades protecting homes and businesses. That experience shows in every installation we do.",
+    es: "Más de tres décadas protegiendo hogares y negocios. Esa experiencia se nota en cada instalación que realizamos.",
   },
 
   // How It Works (7-step timeline)
@@ -259,8 +279,8 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "urgency.cta.title": { en: "Get Protected Today", es: "Protégete hoy" },
   "urgency.cta.sub": {
-    en: "Book your free security check today. We come to you, assess your property and install everything on the same day.",
-    es: "Reserva hoy tu revisión de seguridad gratuita. Vamos a tu propiedad, evaluamos tus necesidades e instalamos todo el mismo día.",
+    en: "Book your free security check today. We come to you, assess your property and take care of everything.",
+    es: "Reserva hoy tu revisión de seguridad gratuita. Vamos a tu propiedad, evaluamos tus necesidades y nos encargamos de todo.",
   },
 
   // Contact info
