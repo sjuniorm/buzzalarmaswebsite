@@ -49,7 +49,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 text-orange text-xs font-semibold px-4 py-2 rounded-full mb-8 uppercase tracking-widest"
         >
           <span className="w-1.5 h-1.5 bg-orange rounded-full animate-pulse" />
-          R.N.S.P. Certified · DGP 4557
+          Homologada R.N.S.P. 4557 · Con aviso a policía
         </motion.div>
 
         {/* Main headline */}

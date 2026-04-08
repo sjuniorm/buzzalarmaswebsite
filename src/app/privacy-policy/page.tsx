@@ -187,7 +187,7 @@ export default function PrivacyPolicy() {
 
       {/* Simple footer */}
       <footer className="border-t border-white/5 py-6 text-center text-white/25 text-xs">
-        © {new Date().getFullYear()} Buzz Alarmas. All rights reserved. · R.N.S.P. Certified · DGP 4557
+        © {new Date().getFullYear()} Buzz Alarmas. All rights reserved. · Homologada R.N.S.P. 4557 · Con aviso a policía
       </footer>
     </div>
   );

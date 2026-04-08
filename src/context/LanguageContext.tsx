@@ -290,7 +290,7 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "All rights reserved.",
     es: "Todos los derechos reservados.",
   },
-  "footer.certified": { en: "R.N.S.P. Certified · DGP 4557", es: "Certificados R.N.S.P. · DGP 4557" },
+  "footer.certified": { en: "Homologada R.N.S.P. 4557 · Con aviso a policía", es: "Homologada R.N.S.P. 4557 · Con aviso a policía" },
   "footer.privacy": { en: "Privacy Policy", es: "Política de Privacidad" },
   "footer.terms": { en: "Terms & Conditions", es: "Términos y Condiciones" },
 };
