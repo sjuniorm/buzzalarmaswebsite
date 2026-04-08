@@ -29,7 +29,7 @@ export default function Hero() {
         Recommended: 1920×1080px JPG, under 300KB. See PHOTOS.md for details.
       */}
       <Image
-        src="/images/hero-bg.jpg"
+        src="/images/header-website.png"
         alt="Buzz Alarmas — professional alarm installation"
         fill
         className="object-cover opacity-25"
