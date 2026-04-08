@@ -297,6 +297,56 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Still have questions? We're happy to help.",
     es: "¿Todavía tienes dudas? Estamos aquí para ayudarte.",
   },
+  "faq.q1": { en: "What is an alarm system and how does it work?", es: "¿Qué es un sistema de alarma y cómo funciona?" },
+  "faq.a1": {
+    en: "An alarm system is a network of wireless sensors installed around your property that detect movement, door or window openings, and other intrusions. When triggered, the alarm activates and our 24/7 control room receives an instant alert. Our operators verify the situation and, if confirmed, contact the police directly.",
+    es: "Un sistema de alarma es una red de sensores inalámbricos instalados en tu propiedad que detectan movimiento, apertura de puertas o ventanas y otras intrusiones. Cuando se activa, nuestra central 24/7 recibe una alerta instantánea. Nuestros operadores verifican la situación y, si se confirma, contactan directamente con la policía.",
+  },
+  "faq.q2": { en: "Do I need internet for the alarm to work?", es: "¿Necesito internet para que la alarma funcione?" },
+  "faq.a2": {
+    en: "No. Our systems work with SIM card backup, so even if your WiFi goes down, your alarm stays active and connected to our control room at all times.",
+    es: "No. Nuestros sistemas funcionan con una SIM de respaldo, de modo que aunque tu WiFi falle, la alarma sigue activa y conectada a nuestra central en todo momento.",
+  },
+  "faq.q3": { en: "Can I control my alarm from my phone?", es: "¿Puedo controlar mi alarma desde el móvil?" },
+  "faq.a3": {
+    en: "Yes. You can arm, disarm and monitor your system from anywhere in the world using our mobile app. You also receive instant push notifications if your alarm is triggered.",
+    es: "Sí. Puedes activar, desactivar y monitorizar tu sistema desde cualquier lugar del mundo con nuestra app móvil. Además, recibes notificaciones push instantáneas si tu alarma se activa.",
+  },
+  "faq.q4": { en: "Is your alarm system pet-friendly?", es: "¿El sistema de alarma es compatible con mascotas?" },
+  "faq.a4": {
+    en: "Yes. Our sensors are calibrated to ignore animals up to 20kg, so your pets can move freely indoors without triggering false alarms.",
+    es: "Sí. Nuestros sensores están calibrados para ignorar animales de hasta 20kg, para que tus mascotas puedan moverse libremente en casa sin activar falsas alarmas.",
+  },
+  "faq.q5": { en: "How long does installation take?", es: "¿Cuánto tiempo dura la instalación?" },
+  "faq.a5": {
+    en: "Most installations take between 2 and 4 hours depending on the size of the property. Our technician arrives, surveys the space, installs all sensors and panels, connects the system to our control room, and walks you through the app before leaving. Everything is wireless, so there are no cables or major works involved.",
+    es: "La mayoría de las instalaciones duran entre 2 y 4 horas según el tamaño de la propiedad. Nuestro técnico llega, revisa el espacio, instala todos los sensores y paneles, conecta el sistema a nuestra central y te enseña a usar la app antes de marcharse. Todo es inalámbrico, sin cables ni obras.",
+  },
+  "faq.q6": { en: "What happens if the alarm is triggered?", es: "¿Qué pasa si se activa la alarma?" },
+  "faq.a6": {
+    en: "Your alarm sends an instant signal to our 24/7 control room. Our operators verify the alert and, if confirmed, immediately contact the police or security service. At the same time, you receive a push notification on your phone so you can check your cameras in real time.",
+    es: "Tu alarma envía una señal instantánea a nuestra central 24/7. Nuestros operadores verifican la alerta y, si se confirma, contactan de inmediato con la policía o el servicio de seguridad. Al mismo tiempo, recibes una notificación push en tu móvil para ver tus cámaras en tiempo real.",
+  },
+  "faq.q7": { en: "Do you offer 24/7 monitoring?", es: "¿Ofrecéis monitorización 24/7?" },
+  "faq.a7": {
+    en: "Yes, and we never install a system without it. Every alarm we fit is connected to our professional monitoring centre from day one. There is no alarm without monitoring — that is the standard we hold ourselves to.",
+    es: "Sí, y nunca instalamos un sistema sin ella. Cada alarma que instalamos está conectada a nuestra central profesional desde el primer día. No existe alarma sin monitorización: ese es el estándar que mantenemos.",
+  },
+  "faq.q8": { en: "Do alarm systems need maintenance?", es: "¿Los sistemas de alarma necesitan mantenimiento?" },
+  "faq.a8": {
+    en: "Yes, and it is included in your monthly plan. Every year, one of our technicians visits your property to check the system and replace batteries at no extra charge. On top of that, we carry out 4 remote maintenance checks per year, each one certified, to make sure everything is running perfectly.",
+    es: "Sí, y está incluido en tu cuota mensual. Cada año, uno de nuestros técnicos visita tu propiedad para revisar el sistema y cambiar las baterías sin coste adicional. Además, realizamos 4 revisiones remotas certificadas al año para asegurarnos de que todo funciona perfectamente.",
+  },
+  "faq.q9": { en: "Do you install CCTV cameras?", es: "¿Instaláis cámaras de videovigilancia?" },
+  "faq.a9": {
+    en: "Yes. Our cameras are fully integrated with your alarm system and controlled through the same app. They use AI detection to distinguish between people, pets and vehicles, so you only get alerts that actually matter. Camera footage can also be linked directly to our control room for full monitoring.",
+    es: "Sí. Nuestras cámaras están totalmente integradas con tu sistema de alarma y se controlan desde la misma app. Utilizan detección por inteligencia artificial para distinguir entre personas, mascotas y vehículos, de modo que solo recibes alertas relevantes. Las imágenes también pueden vincularse a nuestra central para una monitorización completa.",
+  },
+  "faq.q10": { en: "Can I add more sensors later?", es: "¿Puedo añadir más sensores después?" },
+  "faq.a10": {
+    en: "Yes. Your system is fully expandable at any time. Whether you want to add more motion detectors, door sensors, cameras or smoke detectors, it is a simple process and our team handles everything.",
+    es: "Sí. Tu sistema es totalmente ampliable en cualquier momento. Ya sea para añadir detectores de movimiento, sensores de puertas, cámaras o detectores de humo, el proceso es sencillo y nuestro equipo se encarga de todo.",
+  },
 
   // WhatsApp floating button
   "whatsapp.label": { en: "Chat on WhatsApp", es: "Escríbenos por WhatsApp" },
