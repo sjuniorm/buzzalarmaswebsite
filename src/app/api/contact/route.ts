@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
       from: "Buzz Alarmas Website <noreply@buzzalarmas.com>",
       to: ["hola@buzzalarmas.com"],
       replyTo: email,
-      subject: `New enquiry from ${name} — ${location}`,
+      subject: `New enquiry: ${name} (${location})`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #ff914d; padding: 24px; border-radius: 8px 8px 0 0;">
