@@ -62,6 +62,16 @@ html {
 }
 .animate-float { animation: float-idle 7s ease-in-out infinite; }
 
+/* Offset anchor scroll so fixed navbar doesn't cover section headers */
+section[id] {
+  scroll-margin-top: 96px;
+}
+@media (min-width: 768px) {
+  section[id] {
+    scroll-margin-top: 156px;
+  }
+}
+
 /* Pause marquee on hover */
 .pause-on-hover:hover .animate-marquee,
 .pause-on-hover:hover .animate-marquee-fast,

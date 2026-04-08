@@ -14,16 +14,16 @@ interface StepData {
 }
 
 const stepData: StepData[] = [
-  { titleKey: "how2.step1.title", descKey: "how2.step1.desc", phase: "setup", phaseLabel: { en: "Step 1 — Setup", es: "Paso 1 — Instalación" } },
-  { titleKey: "how2.step2.title", descKey: "how2.step2.desc", phase: "setup", phaseLabel: { en: "Step 2 — Armed", es: "Paso 2 — Activada" } },
-  { titleKey: "how2.step3.title", descKey: "how2.step3.desc", phase: "alert", phaseLabel: { en: "Step 3 — ⚠ Alert", es: "Paso 3 — ⚠ Alerta" } },
-  { titleKey: "how2.step4.title", descKey: "how2.step4.desc", phase: "alert", phaseLabel: { en: "Step 4 — Signal Sent", es: "Paso 4 — Señal enviada" } },
-  { titleKey: "how2.step5.title", descKey: "how2.step5.desc", phase: "response", phaseLabel: { en: "Step 5 — Response", es: "Paso 5 — Respuesta" } },
-  { titleKey: "how2.step6.title", descKey: "how2.step6.desc", phase: "response", phaseLabel: { en: "Step 6 — Notified", es: "Paso 6 — Notificado" } },
-  { titleKey: "how2.step7.title", descKey: "how2.step7.desc", phase: "resolved", phaseLabel: { en: "Step 7 — Secured", es: "Paso 7 — Asegurado" } },
+  { titleKey: "how2.step1.title", descKey: "how2.step1.desc", phase: "setup", phaseLabel: { en: "Step 1:Setup", es: "Paso 1:Instalación" } },
+  { titleKey: "how2.step2.title", descKey: "how2.step2.desc", phase: "setup", phaseLabel: { en: "Step 2:Armed", es: "Paso 2:Activada" } },
+  { titleKey: "how2.step3.title", descKey: "how2.step3.desc", phase: "alert", phaseLabel: { en: "Step 3:⚠ Alert", es: "Paso 3:⚠ Alerta" } },
+  { titleKey: "how2.step4.title", descKey: "how2.step4.desc", phase: "alert", phaseLabel: { en: "Step 4:Signal Sent", es: "Paso 4:Señal enviada" } },
+  { titleKey: "how2.step5.title", descKey: "how2.step5.desc", phase: "response", phaseLabel: { en: "Step 5:Response", es: "Paso 5:Respuesta" } },
+  { titleKey: "how2.step6.title", descKey: "how2.step6.desc", phase: "response", phaseLabel: { en: "Step 6:Notified", es: "Paso 6:Notificado" } },
+  { titleKey: "how2.step7.title", descKey: "how2.step7.desc", phase: "resolved", phaseLabel: { en: "Step 7:Secured", es: "Paso 7:Asegurado" } },
 ];
 
-const DURATION_MS = 5500;
+const DURATION_MS = 3500;
 
 /* ─────────────────────────────────────────────────────────
    SHARED HOUSE COMPONENT
@@ -42,7 +42,7 @@ function House({ dimmed = false }: { dimmed?: boolean }) {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCENE 1 — INSTALLATION
+   SCENE 1:INSTALLATION
 ───────────────────────────────────────────────────────── */
 function SceneInstallation() {
   const sensors = [{ cx: 95, cy: 170 }, { cx: 405, cy: 170 }, { cx: 250, cy: 72 }];
@@ -77,7 +77,7 @@ function SceneInstallation() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCENE 2 — ARMING
+   SCENE 2:ARMING
 ───────────────────────────────────────────────────────── */
 function SceneArming() {
   return (
@@ -118,7 +118,7 @@ function SceneArming() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCENE 3 — INTRUSION DETECTED
+   SCENE 3:INTRUSION DETECTED
 ───────────────────────────────────────────────────────── */
 function SceneIntrusion() {
   return (
@@ -168,7 +168,7 @@ function SceneIntrusion() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCENE 4 — SIGNAL SENT TO CONTROL ROOM
+   SCENE 4:SIGNAL SENT TO CONTROL ROOM
 ───────────────────────────────────────────────────────── */
 function SceneSignal() {
   return (
@@ -204,7 +204,7 @@ function SceneSignal() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCENE 5 — POLICE DISPATCHED
+   SCENE 5:POLICE DISPATCHED
 ───────────────────────────────────────────────────────── */
 function ScenePolice() {
   return (
@@ -244,7 +244,7 @@ function ScenePolice() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCENE 6 — CLIENT NOTIFICATION + CAMERA
+   SCENE 6:CLIENT NOTIFICATION + CAMERA
 ───────────────────────────────────────────────────────── */
 function SceneNotification() {
   return (
@@ -292,7 +292,7 @@ function SceneNotification() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCENE 7 — RESOLVED
+   SCENE 7:RESOLVED
 ───────────────────────────────────────────────────────── */
 function SceneResolved() {
   const sparkles = [
@@ -455,7 +455,7 @@ export default function HowItWorks() {
               <svg viewBox="0 0 16 16" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2}><polyline points="6 3 11 8 6 13" /></svg>
             </button>
 
-            {/* Swipe hint — mobile only */}
+            {/* Swipe hint:mobile only */}
             <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white/20 text-xs lg:hidden">swipe to navigate</p>
           </div>
 

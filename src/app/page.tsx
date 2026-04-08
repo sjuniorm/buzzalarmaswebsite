@@ -29,8 +29,7 @@ const localBusinessSchema = {
   },
   areaServed: [
     "Tenerife", "Gran Canaria", "Lanzarote", "Fuerteventura",
-    "La Palma", "La Gomera", "El Hierro", "La Graciosa",
-    "Alicante", "Benidorm", "Torrevieja",
+    "Alicante", "Benidorm", "Torrevieja", "Denia", "Javea", "Calpe", "Altea", "Orihuela Costa",
   ],
   openingHours: "Mo-Su 00:00-24:00",
   priceRange: "€€",
@@ -103,6 +102,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import MobileCtaBar from "@/components/MobileCtaBar";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -132,6 +132,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
       <MobileCtaBar />
     </LanguageProvider>
     </>

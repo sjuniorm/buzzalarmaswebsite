@@ -75,7 +75,7 @@ export default function Navbar() {
             onClick={toggleLang}
             className="text-xs font-semibold text-white/70 hover:text-orange border border-white/20 hover:border-orange rounded px-2.5 py-1.5 transition-all duration-200"
           >
-            {lang === "en" ? "ES" : "EN"}
+            {lang === "en" ? "🇪🇸 ES" : "🇬🇧 EN"}
           </button>
 
           {/* CTA */}
