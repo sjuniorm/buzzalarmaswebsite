@@ -16,8 +16,7 @@ const locations = [
 
 const phones = [
   { label: "Principal", value: "+34 902 099 910", href: "tel:+34902099910" },
-  { label: "Tenerife",  value: "+34 922 099 200", href: "tel:+34922099200" },
-  { label: "Canarias",  value: "+34 928 077 079", href: "tel:+34928077079" },
+  { label: "Canarias",  value: "+34 922 099 200 / +34 928 077 079", href: "tel:+34922099200" },
 ];
 
 const emails = [
@@ -147,7 +146,7 @@ export default function ContactForm() {
                     <MailIcon className="w-3.5 h-3.5 text-orange/60 shrink-0" />
                     <span className="text-white/40 text-xs uppercase tracking-wider">{label}</span>
                   </div>
-                  <span className="text-white/80 text-xs font-medium group-hover:text-orange transition-colors truncate max-w-[180px]">{value}</span>
+                  <span className="text-white/80 text-xs font-medium group-hover:text-orange transition-colors break-all">{value}</span>
                 </a>
               ))}
             </div>
