@@ -54,7 +54,7 @@ export default function Services() {
               className="group bg-dark-3 border border-white/5 hover:border-orange/40 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10 flex gap-5 items-start"
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange/15 to-orange/5 border border-orange/20 flex items-center justify-center shrink-0 group-hover:from-orange/25 transition-all duration-300">
-                <Icon className="w-5 h-5 text-orange" />
+                <Icon className="w-5 h-5 text-orange group-hover:scale-110 group-hover:rotate-6 transition-transform duration-200" />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-orange transition-colors duration-200">
@@ -78,7 +78,7 @@ export default function Services() {
               className="group bg-dark-3/60 border border-white/5 hover:border-orange/30 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-orange/10 flex gap-4 items-start"
             >
               <div className="w-10 h-10 rounded-lg bg-orange/10 border border-orange/15 flex items-center justify-center shrink-0 group-hover:bg-orange/20 transition-all duration-300">
-                <Icon className="w-5 h-5 text-orange" />
+                <Icon className="w-5 h-5 text-orange group-hover:scale-110 transition-transform duration-200" />
               </div>
               <div className="min-w-0">
                 <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-orange transition-colors duration-200">

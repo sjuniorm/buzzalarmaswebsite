@@ -8,10 +8,17 @@ export default function Navbar() {
   const { t, lang, toggleLang } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      const doc = document.documentElement;
+      const scrollTop = window.scrollY;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      setProgress(scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,6 +37,10 @@ export default function Navbar() {
         scrolled ? "bg-dark/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
+      {/* Scroll progress bar */}
+      <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#ff914d] to-[#e65a1e] transition-all duration-100 z-10"
+        style={{ width: `${progress}%` }}
+      />
       <nav className="max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center">

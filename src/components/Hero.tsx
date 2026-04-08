@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLang } from "@/context/LanguageContext";
+import { ShieldIcon, LockIcon, CameraIcon, BellIcon, ShieldCheckIcon } from "@/components/Icons";
 
 export default function Hero() {
   const { t } = useLang();
@@ -23,6 +24,25 @@ export default function Hero() {
 
       {/* Orange glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange/10 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Floating security icons */}
+      {[
+        { Icon: ShieldIcon,      top: "12%", left: "6%",  delay: 0,   duration: 7,  size: "w-9 h-9"  },
+        { Icon: LockIcon,        top: "18%", left: "91%", delay: 1.4, duration: 8,  size: "w-7 h-7"  },
+        { Icon: CameraIcon,      top: "72%", left: "88%", delay: 0.7, duration: 6,  size: "w-8 h-8"  },
+        { Icon: BellIcon,        top: "78%", left: "5%",  delay: 2.1, duration: 9,  size: "w-7 h-7"  },
+        { Icon: ShieldCheckIcon, top: "44%", left: "94%", delay: 3.0, duration: 7,  size: "w-6 h-6"  },
+      ].map(({ Icon, top, left, delay, duration, size }, i) => (
+        <motion.div
+          key={i}
+          className="absolute pointer-events-none text-orange/12 z-10"
+          style={{ top, left }}
+          animate={{ y: [0, -18, 0], rotate: [0, 5, 0] }}
+          transition={{ duration, repeat: Infinity, delay, ease: "easeInOut" }}
+        >
+          <Icon className={size} />
+        </motion.div>
+      ))}
 
       {/*
         HERO PHOTO: Drop public/images/hero-bg.jpg into the project and it appears automatically.

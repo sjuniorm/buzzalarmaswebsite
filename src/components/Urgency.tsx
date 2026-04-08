@@ -73,6 +73,12 @@ export default function Urgency() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-orange-dark to-orange" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_rgba(0,0,0,0.3),_transparent)]" />
+          {/* Animated shimmer sweep */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"
+            animate={{ x: ["-100%", "200%"] }}
+            transition={{ duration: 3.5, repeat: Infinity, repeatDelay: 4, ease: "easeInOut" }}
+          />
           <div className="relative px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-2xl md:text-3xl font-black text-white mb-2">

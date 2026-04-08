@@ -57,14 +57,34 @@ function Stars({ count }: { count: number }) {
   );
 }
 
+function ReviewCard({ review }: { review: typeof reviews[0] }) {
+  return (
+    <div className="w-80 shrink-0 bg-dark-2 border border-white/5 rounded-2xl p-6 flex flex-col gap-3 mx-3">
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <p className="text-white font-semibold text-sm">{review.name}</p>
+          <p className="text-white/30 text-xs mt-0.5">{review.badge}</p>
+        </div>
+        <GoogleIcon />
+      </div>
+      <Stars count={review.stars} />
+      <p className="text-white/55 text-sm leading-relaxed line-clamp-4">
+        &ldquo;{review.text}&rdquo;
+      </p>
+    </div>
+  );
+}
+
 export default function Testimonials() {
   const { t } = useLang();
 
-  return (
-    <section id="reviews" className="py-24 bg-dark">
-      <div className="max-w-6xl mx-auto px-6">
+  // Duplicate for seamless looping — need at least 2 full sets
+  const row1 = [...reviews, ...reviews, ...reviews, ...reviews];
+  const row2 = [...reviews, ...reviews, ...reviews, ...reviews].reverse();
 
-        {/* Header */}
+  return (
+    <section id="reviews" className="py-24 bg-dark overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,29 +98,33 @@ export default function Testimonials() {
           <p className="text-white/50 text-lg">{t("testimonials.sub")}</p>
           <div className="w-16 h-1 bg-orange mx-auto mt-6 rounded-full" />
         </motion.div>
+      </div>
 
-        {/* Reviews grid — 3 on top, 2 centred below */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
-          {reviews.slice(0, 3).map((review, i) => (
-            <ReviewCard key={i} review={review} delay={i * 0.08} />
+      {/* Row 1 — scrolls left */}
+      <div className="pause-on-hover overflow-hidden mb-4">
+        <div className="flex animate-marquee will-change-transform">
+          {row1.map((review, i) => (
+            <ReviewCard key={i} review={review} />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto">
-          {reviews.slice(3).map((review, i) => (
-            <ReviewCard key={i + 3} review={review} delay={(i + 3) * 0.08} />
+      </div>
+
+      {/* Row 2 — scrolls right */}
+      <div className="pause-on-hover overflow-hidden">
+        <div className="flex animate-marquee-reverse will-change-transform">
+          {row2.map((review, i) => (
+            <ReviewCard key={i} review={review} />
           ))}
         </div>
+      </div>
 
-        {/* Google CTA */}
-        {/*
-          HOW TO UPDATE: replace the href with your Google Business profile URL.
-          Search your business on Google, click "Write a review", copy the URL.
-        */}
+      {/* Google CTA */}
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center mt-12"
         >
           <a
@@ -115,32 +139,5 @@ export default function Testimonials() {
         </motion.div>
       </div>
     </section>
-  );
-}
-
-function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay }}
-      className="bg-dark-2 border border-white/5 rounded-2xl p-6 flex flex-col gap-3"
-    >
-      {/* Top row: name + Google icon */}
-      <div className="flex items-start justify-between gap-2">
-        <div>
-          <p className="text-white font-semibold text-sm">{review.name}</p>
-          <p className="text-white/30 text-xs mt-0.5">{review.badge}</p>
-        </div>
-        <GoogleIcon />
-      </div>
-
-      <Stars count={review.stars} />
-
-      <p className="text-white/55 text-sm leading-relaxed">
-        &ldquo;{review.text}&rdquo;
-      </p>
-    </motion.div>
   );
 }
