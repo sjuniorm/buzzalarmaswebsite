@@ -41,8 +41,9 @@ export default function WhyBuzz() {
                 fill
                 className="object-cover"
               />
-              {/* Gradient overlay at bottom */}
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
+              {/* Gradient overlay — darkens the photo */}
+              <div className="absolute inset-0 bg-dark/45" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent" />
 
               {/* Floating badge — bottom left */}
               <motion.div

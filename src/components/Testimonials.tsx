@@ -100,19 +100,10 @@ export default function Testimonials() {
         </motion.div>
       </div>
 
-      {/* Row 1 — scrolls left */}
-      <div className="pause-on-hover overflow-hidden mb-4">
+      {/* Single slow-scrolling row */}
+      <div className="pause-on-hover overflow-hidden">
         <div className="flex animate-marquee will-change-transform">
           {row1.map((review, i) => (
-            <ReviewCard key={i} review={review} />
-          ))}
-        </div>
-      </div>
-
-      {/* Row 2 — scrolls right */}
-      <div className="pause-on-hover overflow-hidden">
-        <div className="flex animate-marquee-reverse will-change-transform">
-          {row2.map((review, i) => (
             <ReviewCard key={i} review={review} />
           ))}
         </div>
