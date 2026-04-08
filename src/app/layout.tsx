@@ -10,18 +10,35 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Buzz Alarmas | Protección Real. Respuesta Real.",
+  title: "Buzz Alarmas | Alarmas en Canarias y Alicante · Instalación Gratuita",
   description:
-    "Sistemas de alarma profesionales para hogares y negocios en las Islas Canarias y Alicante. Vigilancia 24/7, respuesta policial y el mejor servicio al cliente. Instalación gratuita.",
+    "Empresa de alarmas homologada R.N.S.P. en Tenerife, Gran Canaria, Lanzarote, Fuerteventura y Provincia de Alicante. Vigilancia 24/7, respuesta policial directa e instalación gratuita.",
   keywords:
-    "alarmas, seguridad, islas canarias, alicante, alarma hogar, alarma negocio, antiokupa, detección incendio, central receptora, 24 horas, tenerife, gran canaria, lanzarote",
+    "alarmas canarias, alarmas alicante, alarma hogar tenerife, alarma negocio gran canaria, seguridad antiokupa, detección incendio, central receptora 24 horas, instalación gratuita alarma, lanzarote fuerteventura alarmas, RNSP",
+  metadataBase: new URL("https://buzzalarmas.com"),
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Buzz Alarmas | Protección Real. Respuesta Real.",
+    title: "Buzz Alarmas | Alarmas en Canarias y Alicante · Instalación Gratuita",
     description:
-      "Sistemas de alarma profesionales para hogares y negocios. Vigilancia 24/7 con respuesta policial. Instalación gratuita.",
+      "Empresa de alarmas homologada R.N.S.P. Tenerife, Gran Canaria, Lanzarote, Fuerteventura y Provincia de Alicante. Vigilancia 24/7 con respuesta policial. Instalación gratuita.",
+    url: "https://buzzalarmas.com",
     siteName: "Buzz Alarmas",
     locale: "es_ES",
     type: "website",
+    images: [
+      {
+        url: "/images/logo-color.png",
+        width: 1200,
+        height: 630,
+        alt: "Buzz Alarmas — Alarmas profesionales en Canarias y Alicante",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Buzz Alarmas | Alarmas en Canarias y Alicante",
+    description: "Empresa de alarmas homologada R.N.S.P. Vigilancia 24/7, respuesta policial. Instalación gratuita.",
+    images: ["/images/logo-color.png"],
   },
   manifest: "/images/favicon_io/site.webmanifest",
   icons: {
