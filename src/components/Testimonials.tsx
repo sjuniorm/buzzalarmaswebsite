@@ -57,9 +57,15 @@ function Stars({ count }: { count: number }) {
   );
 }
 
-function ReviewCard({ review }: { review: typeof reviews[0] }) {
+function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: number }) {
   return (
-    <div className="w-80 shrink-0 bg-dark-2 border border-white/5 rounded-2xl p-6 flex flex-col gap-3 mx-3">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
+      className="bg-dark-2 border border-white/5 rounded-2xl p-6 flex flex-col gap-3"
+    >
       <div className="flex items-start justify-between gap-2">
         <div>
           <p className="text-white font-semibold text-sm">{review.name}</p>
@@ -68,22 +74,18 @@ function ReviewCard({ review }: { review: typeof reviews[0] }) {
         <GoogleIcon />
       </div>
       <Stars count={review.stars} />
-      <p className="text-white/55 text-sm leading-relaxed line-clamp-4">
+      <p className="text-white/55 text-sm leading-relaxed">
         &ldquo;{review.text}&rdquo;
       </p>
-    </div>
+    </motion.div>
   );
 }
 
 export default function Testimonials() {
   const { t } = useLang();
 
-  // Duplicate for seamless looping — need at least 2 full sets
-  const row1 = [...reviews, ...reviews, ...reviews, ...reviews];
-  const row2 = [...reviews, ...reviews, ...reviews, ...reviews].reverse();
-
   return (
-    <section id="reviews" className="py-24 bg-dark overflow-hidden">
+    <section id="reviews" className="py-24 bg-dark">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -98,24 +100,24 @@ export default function Testimonials() {
           <p className="text-white/50 text-lg">{t("testimonials.sub")}</p>
           <div className="w-16 h-1 bg-orange mx-auto mt-6 rounded-full" />
         </motion.div>
-      </div>
 
-      {/* Single slow-scrolling row */}
-      <div className="pause-on-hover overflow-hidden">
-        <div className="flex animate-marquee will-change-transform">
-          {row1.map((review, i) => (
-            <ReviewCard key={i} review={review} />
+        {/* 3 on top, 2 centred below */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+          {reviews.slice(0, 3).map((review, i) => (
+            <ReviewCard key={i} review={review} delay={i * 0.08} />
           ))}
         </div>
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto">
+          {reviews.slice(3).map((review, i) => (
+            <ReviewCard key={i + 3} review={review} delay={(i + 3) * 0.08} />
+          ))}
+        </div>
 
-      {/* Google CTA */}
-      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="flex justify-center mt-12"
         >
           <a
