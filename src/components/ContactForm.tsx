@@ -10,62 +10,23 @@ const locations = [
   "Gran Canaria",
   "Lanzarote",
   "Fuerteventura",
-  "La Palma",
-  "La Gomera",
-  "El Hierro",
-  "La Graciosa",
-  "Alicante / Costa Blanca",
-  "Other",
+  "Provincia de Alicante",
+  "Otra / Other",
 ];
 
-const contactInfo = [
-  {
-    Icon: WhatsAppIcon,
-    label: "WhatsApp",
-    value: "+34 950 09 10 11",
-    href: "https://wa.me/34950091011",
-    highlight: true,
-    note: "Fastest response",
-  },
-  {
-    Icon: PhoneIcon,
-    label: "Main",
-    value: "+34 902 099 910",
-    href: "tel:+34902099910",
-    highlight: false,
-  },
-  {
-    Icon: PhoneIcon,
-    label: "Tenerife",
-    value: "+34 922 099 200",
-    href: "tel:+34922099200",
-    highlight: false,
-  },
-  {
-    Icon: PhoneIcon,
-    label: "Gran Canaria / Lanzarote / Fuerteventura",
-    value: "+34 928 077 079",
-    href: "tel:+34928077079",
-    highlight: false,
-  },
-  {
-    Icon: MailIcon,
-    label: "Email",
-    value: "hola@buzzalarmas.com",
-    href: "mailto:hola@buzzalarmas.com",
-    highlight: false,
-  },
-  {
-    Icon: MailIcon,
-    label: "Admin",
-    value: "administracion@buzzalarmas.com",
-    href: "mailto:administracion@buzzalarmas.com",
-    highlight: false,
-  },
+const phones = [
+  { label: "Principal", value: "+34 902 099 910", href: "tel:+34902099910" },
+  { label: "Tenerife",  value: "+34 922 099 200", href: "tel:+34922099200" },
+  { label: "Canarias",  value: "+34 928 077 079", href: "tel:+34928077079" },
+];
+
+const emails = [
+  { label: "Info",  value: "hola@buzzalarmas.com",           href: "mailto:hola@buzzalarmas.com" },
+  { label: "Admin", value: "administracion@buzzalarmas.com", href: "mailto:administracion@buzzalarmas.com" },
 ];
 
 export default function ContactForm() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [form, setForm] = useState({
     name: "",
@@ -134,46 +95,68 @@ export default function ContactForm() {
           >
             <h3 className="text-white font-bold text-lg mb-6">{t("contact.reach")}</h3>
 
-            {contactInfo.map(({ Icon, label, value, href, highlight, note }, i) => (
-              <a
-                key={i}
-                href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={`flex items-start gap-3 p-4 rounded-xl border transition-all duration-200 group ${
-                  highlight
-                    ? "bg-green-950/30 border-green-500/30 hover:border-green-400/50"
-                    : "bg-dark-2 border-white/5 hover:border-orange/30"
-                }`}
-              >
-                <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5 ${
-                  highlight ? "bg-green-500/20" : "bg-orange/10"
-                }`}>
-                  <Icon className={`w-4 h-4 ${highlight ? "text-green-400" : "text-orange"}`} />
-                </div>
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2">
-                    <p className="text-white/40 text-xs uppercase tracking-wider">{label}</p>
-                    {note && (
-                      <span className="text-green-400 text-xs font-semibold">· {note}</span>
-                    )}
-                  </div>
-                  <p className={`text-sm font-medium mt-0.5 truncate ${highlight ? "text-green-400" : "text-white/80 group-hover:text-orange"} transition-colors`}>
-                    {value}
-                  </p>
-                </div>
-              </a>
-            ))}
-
-            {/* Coverage note */}
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-dark-2 border border-white/5 mt-2">
-              <div className="w-9 h-9 rounded-lg bg-orange/10 flex items-center justify-center shrink-0 mt-0.5">
-                <MapPinIcon className="w-4 h-4 text-orange" />
+            {/* WhatsApp — highlighted */}
+            <a
+              href="https://wa.me/34950091011"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-4 rounded-xl bg-orange/10 border border-orange/30 hover:border-orange/60 hover:bg-orange/15 transition-all duration-200 group mb-4"
+            >
+              <div className="w-10 h-10 rounded-xl bg-orange/20 flex items-center justify-center shrink-0">
+                <WhatsAppIcon className="w-5 h-5 text-orange" />
               </div>
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider">{t("coverage.title")}</p>
-                <p className="text-white/70 text-sm mt-0.5">Canary Islands · Province of Alicante</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-orange text-xs font-bold uppercase tracking-wider">WhatsApp</p>
+                  <span className="text-orange/60 text-xs">· {lang === "en" ? "Fastest response" : "Respuesta más rápida"}</span>
+                </div>
+                <p className="text-white font-semibold mt-0.5">+34 950 09 10 11</p>
               </div>
+            </a>
+
+            {/* Phone numbers */}
+            <div className="bg-dark-2 border border-white/5 rounded-xl overflow-hidden mb-4">
+              {phones.map(({ label, value, href }, i) => (
+                <a
+                  key={i}
+                  href={href}
+                  className={`flex items-center justify-between px-4 py-3 hover:bg-white/4 transition-colors duration-150 group ${
+                    i < phones.length - 1 ? "border-b border-white/5" : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <PhoneIcon className="w-3.5 h-3.5 text-orange/60 shrink-0" />
+                    <span className="text-white/40 text-xs uppercase tracking-wider">{label}</span>
+                  </div>
+                  <span className="text-white/80 text-sm font-medium group-hover:text-orange transition-colors">{value}</span>
+                </a>
+              ))}
+            </div>
+
+            {/* Emails */}
+            <div className="bg-dark-2 border border-white/5 rounded-xl overflow-hidden mb-4">
+              {emails.map(({ label, value, href }, i) => (
+                <a
+                  key={i}
+                  href={href}
+                  className={`flex items-center justify-between px-4 py-3 hover:bg-white/4 transition-colors duration-150 group ${
+                    i < emails.length - 1 ? "border-b border-white/5" : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <MailIcon className="w-3.5 h-3.5 text-orange/60 shrink-0" />
+                    <span className="text-white/40 text-xs uppercase tracking-wider">{label}</span>
+                  </div>
+                  <span className="text-white/80 text-xs font-medium group-hover:text-orange transition-colors truncate max-w-[180px]">{value}</span>
+                </a>
+              ))}
+            </div>
+
+            {/* Coverage note */}
+            <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-dark-2 border border-white/5">
+              <MapPinIcon className="w-3.5 h-3.5 text-orange/60 shrink-0" />
+              <p className="text-white/40 text-xs uppercase tracking-wider">{t("coverage.title")}</p>
+              <p className="text-white/60 text-xs ml-auto">Canarias · Alicante</p>
             </div>
           </motion.div>
 
@@ -231,7 +214,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   className="w-full bg-dark-3 border border-white/10 focus:border-orange text-white rounded-xl px-4 py-3 text-sm outline-none transition-colors duration-200"
                 >
-                  <option value="" disabled>—</option>
+                  <option value="" disabled>Selecciona tu ubicación</option>
                   {locations.map((loc) => (
                     <option key={loc} value={loc}>{loc}</option>
                   ))}

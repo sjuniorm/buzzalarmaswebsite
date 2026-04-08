@@ -66,7 +66,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 text-orange text-[10px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 uppercase tracking-widest"
+          className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 text-orange text-[10px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mt-20 sm:mt-0 mb-6 sm:mb-8 uppercase tracking-widest"
         >
           <span className="w-1.5 h-1.5 bg-orange rounded-full animate-pulse" />
           Homologada R.N.S.P. 4557 · Con aviso a policía
