@@ -38,7 +38,7 @@ export default function Navbar() {
             alt="Buzz Alarmas"
             width={360}
             height={120}
-            className="h-16 md:h-32 w-auto object-contain"
+            className="h-20 md:h-36 w-auto object-contain"
             priority
           />
         </a>

@@ -212,16 +212,16 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "coverage.canary": { en: "Canary Islands", es: "Islas Canarias" },
   "coverage.canary.desc": {
-    en: "All 8 islands: Tenerife, Gran Canaria, Lanzarote, Fuerteventura, La Palma, La Gomera, El Hierro and La Graciosa.",
-    es: "Las 8 islas: Tenerife, Gran Canaria, Lanzarote, Fuerteventura, La Palma, La Gomera, El Hierro y La Graciosa.",
+    en: "We cover Tenerife, Gran Canaria, Lanzarote and Fuerteventura. Professional installation and full 24/7 monitoring on all four islands.",
+    es: "Cubrimos Tenerife, Gran Canaria, Lanzarote y Fuerteventura. Instalación profesional y vigilancia 24/7 en las cuatro islas.",
   },
   "coverage.alicante": {
     en: "Province of Alicante",
     es: "Provincia de Alicante",
   },
   "coverage.alicante.desc": {
-    en: "Costa Blanca and surrounding areas on the mainland: Alicante, Benidorm, Torrevieja, Denia and more.",
-    es: "Costa Blanca y alrededores en la península: Alicante, Benidorm, Torrevieja, Denia y más.",
+    en: "We cover the entire Province of Alicante, from the city to the coast and inland municipalities. Full service throughout the province.",
+    es: "Cubrimos toda la Provincia de Alicante, desde la capital hasta la costa y los municipios del interior. Servicio completo en toda la provincia.",
   },
 
   // Contact
