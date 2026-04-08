@@ -61,8 +61,8 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "services.monitoring.title": { en: "24/7 Monitoring", es: "Central de alarmas" },
   "services.monitoring.desc": {
-    en: "Our control room never sleeps. The moment your alarm triggers, we respond — with police if needed.",
-    es: "Nuestra central nunca duerme. En el momento que salta la alarma, respondemos — con policía si es necesario.",
+    en: "Our control room never sleeps. The moment your alarm triggers, we respond. With police if needed.",
+    es: "Nuestra central nunca duerme. En el momento que salta la alarma, respondemos. Con policía si es necesario.",
   },
   "services.app.title": { en: "Smart App Control", es: "Control desde el móvil" },
   "services.app.desc": {
@@ -102,8 +102,8 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "Mejor servicio al cliente",
   },
   "why.service.desc": {
-    en: "Our clients say it best — fast, friendly and professional from first call to installation and beyond.",
-    es: "Nuestros clientes lo dicen mejor — rápidos, amables y profesionales desde la primera llamada.",
+    en: "Our clients say it best: fast, friendly and professional from the first call to installation and beyond.",
+    es: "Nuestros clientes lo dicen mejor: rápidos, amables y profesionales desde la primera llamada.",
   },
   "why.wireless.title": {
     en: "100% Wireless",
@@ -125,23 +125,23 @@ const translations: Record<string, Record<Lang, string>> = {
   // How It Works (7-step timeline)
   "how2.title": { en: "How It Works", es: "Cómo funciona" },
   "how2.sub": {
-    en: "From installation to police on-site — see exactly how our system protects you, step by step.",
-    es: "Desde la instalación hasta la policía en el lugar — descubre exactamente cómo te protege nuestro sistema.",
+    en: "From installation to police on-site. See exactly how our system protects you, step by step.",
+    es: "Desde la instalación hasta la policía en el lugar. Descubre exactamente cómo te protege nuestro sistema.",
   },
   "how2.step1.title": { en: "System Installed", es: "Sistema instalado" },
   "how2.step1.desc": {
-    en: "Our team installs your wireless alarm system cleanly and quickly — in your home or business. Free of charge. No drilling.",
+    en: "Our team installs your wireless alarm system cleanly and quickly in your home or business. Free of charge. No drilling.",
     es: "Nuestro equipo instala tu sistema de alarma inalámbrico de forma limpia y rápida, en tu hogar o negocio. Sin coste y sin taladros.",
   },
   "how2.step2.title": { en: "You Leave & Arm It", es: "Sales y la activas" },
   "how2.step2.desc": {
-    en: "You leave the property and arm the alarm in seconds via the mobile app — from anywhere in the world.",
+    en: "You leave the property and arm the alarm in seconds via the mobile app, from anywhere in the world.",
     es: "Sales de la propiedad y activas la alarma en segundos desde la app móvil, desde cualquier parte del mundo.",
   },
   "how2.step3.title": { en: "Intrusion Detected", es: "Intrusión detectada" },
   "how2.step3.desc": {
-    en: "A sensor detects movement — outdoor perimeter or indoor. The system registers the intrusion instantly.",
-    es: "Un sensor detecta movimiento — perímetro exterior o interior. El sistema registra la intrusión al instante.",
+    en: "A sensor detects movement, outdoor perimeter or indoor. The system registers the intrusion instantly.",
+    es: "Un sensor detecta movimiento, en el perímetro exterior o en el interior. El sistema registra la intrusión al instante.",
   },
   "how2.step4.title": { en: "Signal Sent to Control Room", es: "Señal enviada a la central" },
   "how2.step4.desc": {
@@ -150,7 +150,7 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "how2.step5.title": { en: "Police Dispatched", es: "Policía enviada" },
   "how2.step5.desc": {
-    en: "Our control room verifies the alert and immediately contacts the police or security service. Real response — not just a siren.",
+    en: "Our control room verifies the alert and immediately contacts the police or security service. Real response, not just a siren.",
     es: "Nuestra central verifica la alerta y contacta inmediatamente con la policía o el servicio de seguridad. Respuesta real, no solo una sirena.",
   },
   "how2.step6.title": { en: "You Get Notified", es: "Recibes la notificación" },
@@ -192,16 +192,16 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "coverage.canary": { en: "Canary Islands", es: "Islas Canarias" },
   "coverage.canary.desc": {
-    en: "All 8 islands — Tenerife, Gran Canaria, Lanzarote, Fuerteventura, La Palma, La Gomera, El Hierro and La Graciosa.",
-    es: "Las 8 islas — Tenerife, Gran Canaria, Lanzarote, Fuerteventura, La Palma, La Gomera, El Hierro y La Graciosa.",
+    en: "All 8 islands: Tenerife, Gran Canaria, Lanzarote, Fuerteventura, La Palma, La Gomera, El Hierro and La Graciosa.",
+    es: "Las 8 islas: Tenerife, Gran Canaria, Lanzarote, Fuerteventura, La Palma, La Gomera, El Hierro y La Graciosa.",
   },
   "coverage.alicante": {
     en: "Province of Alicante",
     es: "Provincia de Alicante",
   },
   "coverage.alicante.desc": {
-    en: "Costa Blanca and surrounding areas on the mainland — Alicante, Benidorm, Torrevieja, Denia and more.",
-    es: "Costa Blanca y alrededores en la península — Alicante, Benidorm, Torrevieja, Denia y más.",
+    en: "Costa Blanca and surrounding areas on the mainland: Alicante, Benidorm, Torrevieja, Denia and more.",
+    es: "Costa Blanca y alrededores en la península: Alicante, Benidorm, Torrevieja, Denia y más.",
   },
 
   // Contact
@@ -244,23 +244,23 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "urgency.robbery.title": { en: "Burglary & Robbery", es: "Robo e Irrupción" },
   "urgency.robbery.desc": {
-    en: "Spain records thousands of home break-ins every year. Most happen when a property looks unprotected — a visible alarm system is a proven deterrent.",
-    es: "España registra miles de robos en domicilios cada año. La mayoría ocurren cuando la propiedad parece desprotegida — un sistema de alarma visible es un disuasor demostrado.",
+    en: "Spain records thousands of home break-ins every year. Most happen when a property looks unprotected. A visible alarm system is a proven deterrent.",
+    es: "España registra miles de robos en domicilios cada año. La mayoría ocurren cuando la propiedad parece desprotegida. Un sistema de alarma visible es un disuasor demostrado.",
   },
   "urgency.squatter.title": { en: "Illegal Occupation (Okupa)", es: "Ocupación Ilegal (Okupa)" },
   "urgency.squatter.desc": {
-    en: "Squatters can take over an unoccupied property in hours. Our specialised alerts notify you the moment anyone enters — giving you time to act.",
-    es: "Los okupas pueden tomar una propiedad desocupada en horas. Nuestras alertas especializadas te avisan en el momento en que alguien entra — dándote tiempo de actuar.",
+    en: "Squatters can take over an unoccupied property in hours. Our specialised alerts notify you the moment anyone enters. With a connected alarm, our control room is authorised to dispatch police directly to remove squatters. It is the only legal way to stop an occupation before it starts.",
+    es: "Los okupas pueden tomar una propiedad desocupada en horas. Nuestras alertas especializadas te avisan en el momento en que alguien entra. Con una alarma conectada, nuestra central está autorizada para enviar a la policía directamente a desalojar a los ocupantes. Es la única forma legal de frenar una ocupación antes de que se consolide.",
   },
   "urgency.solution.title": { en: "Buzz Alarmas Is the Solution", es: "Buzz Alarmas es la solución" },
   "urgency.solution.desc": {
-    en: "Police response, 24/7 monitoring, wireless installation, and the best customer service on the islands. Protect your property — and your peace of mind.",
-    es: "Respuesta policial, vigilancia 24/7, instalación inalámbrica y el mejor servicio al cliente de las islas. Protege tu propiedad y tu tranquilidad.",
+    en: "Police response, 24/7 monitoring, wireless installation and the best customer service across the Canary Islands and the Province of Alicante. Protect your property and your peace of mind.",
+    es: "Respuesta policial, vigilancia 24/7, instalación inalámbrica y el mejor servicio al cliente en las Islas Canarias y la Provincia de Alicante. Protege tu propiedad y tu tranquilidad.",
   },
   "urgency.cta.title": { en: "Get Protected Today", es: "Protégete hoy" },
   "urgency.cta.sub": {
-    en: "Free consultation. No obligation. Installation included.",
-    es: "Consulta gratuita. Sin compromiso. Instalación incluida.",
+    en: "Book your free security check today. We come to you, assess your property and install everything on the same day.",
+    es: "Reserva hoy tu revisión de seguridad gratuita. Vamos a tu propiedad, evaluamos tus necesidades e instalamos todo el mismo día.",
   },
 
   // Contact info
