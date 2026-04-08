@@ -329,7 +329,7 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "faq.q7": { en: "Do you offer 24/7 monitoring?", es: "¿Ofrecéis monitorización 24/7?" },
   "faq.a7": {
-    en: "Yes, and we never install a system without it. Every alarm we fit is connected to our professional monitoring centre from day one. There is no alarm without monitoring — that is the standard we hold ourselves to.",
+    en: "Yes, and we never install a system without it. Every alarm we fit is connected to our professional monitoring centre from day one. No alarm without monitoring. That is the standard we hold ourselves to.",
     es: "Sí, y nunca instalamos un sistema sin ella. Cada alarma que instalamos está conectada a nuestra central profesional desde el primer día. No existe alarma sin monitorización: ese es el estándar que mantenemos.",
   },
   "faq.q8": { en: "Do alarm systems need maintenance?", es: "¿Los sistemas de alarma necesitan mantenimiento?" },

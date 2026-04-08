@@ -84,7 +84,7 @@ export default function Services() {
                 <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-orange transition-colors duration-200">
                   {t(titleKey)}
                 </h3>
-                <p className="text-white/50 text-sm leading-relaxed line-clamp-3">{t(descKey)}</p>
+                <p className="text-white/50 text-sm leading-relaxed">{t(descKey)}</p>
               </div>
             </motion.div>
           ))}
