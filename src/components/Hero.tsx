@@ -32,7 +32,7 @@ export default function Hero() {
         src="/images/header-website.png"
         alt="Buzz Alarmas — professional alarm installation"
         fill
-        className="object-cover object-right md:object-center opacity-25"
+        className="object-cover opacity-25 [object-position:85%_center] md:[object-position:center]"
         priority
         onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
       />
@@ -46,7 +46,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 text-orange text-xs font-semibold px-4 py-2 rounded-full mb-8 uppercase tracking-widest"
+          className="hidden sm:inline-flex items-center gap-2 bg-orange/10 border border-orange/30 text-orange text-xs font-semibold px-4 py-2 rounded-full mb-8 uppercase tracking-widest"
         >
           <span className="w-1.5 h-1.5 bg-orange rounded-full animate-pulse" />
           Homologada R.N.S.P. 4557 · Con aviso a policía

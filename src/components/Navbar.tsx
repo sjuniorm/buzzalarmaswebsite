@@ -30,15 +30,15 @@ export default function Navbar() {
         scrolled ? "bg-dark/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center">
           <Image
             src="/images/logo-white.png"
             alt="Buzz Alarmas"
-            width={320}
-            height={110}
-            className="h-28 w-auto object-contain"
+            width={360}
+            height={120}
+            className="h-16 md:h-32 w-auto object-contain"
             priority
           />
         </a>

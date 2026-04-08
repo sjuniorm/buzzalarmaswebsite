@@ -5,108 +5,122 @@ import { useLang } from "@/context/LanguageContext";
 import { MapPinIcon } from "@/components/Icons";
 
 /* ─────────────────────────────────────────────────────────
-   Animated coverage map — Spain outline with glowing zones
+   Animated coverage map — real Spain outline + glowing zones
+   Mainland path based on simplified geographic coordinates
+   scaled to a 500×380 viewBox
 ───────────────────────────────────────────────────────── */
 function CoverageMap() {
   return (
-    <svg
-      viewBox="0 0 560 340"
-      className="w-full h-full"
-      aria-hidden
-    >
-      {/* ── Spain + Portugal peninsula outline ── */}
+    <svg viewBox="0 0 500 380" className="w-full h-full" aria-hidden>
+
+      {/* ── Iberian Peninsula — real simplified outline ── */}
+      {/* Scaled from actual geographic shape of Spain+Portugal */}
       <path
-        d="M 108,42 C 120,36 145,32 168,34 L 200,30 C 228,26 262,25 292,30 L 335,35 C 368,40 398,52 418,72 L 432,92 C 442,110 448,132 446,152 L 442,174 C 437,196 430,216 422,232 L 410,252 C 398,268 380,278 360,284 L 334,290 C 308,296 278,298 252,296 L 226,292 C 200,286 176,274 158,258 L 140,238 C 124,220 114,196 108,172 L 102,148 C 96,124 96,98 104,74 Z"
-        fill="rgba(255,145,77,0.04)"
-        stroke="rgba(255,145,77,0.18)"
-        strokeWidth="1.2"
+        d="
+          M 152,28
+          L 168,22 L 196,18 L 224,16 L 256,17 L 284,20
+          L 308,18 L 326,22 L 340,20 L 356,26 L 368,24
+          L 384,32 L 392,40 L 400,50 L 404,62
+          L 412,72 L 418,86 L 420,102 L 416,116
+          L 422,128 L 422,142 L 418,154 L 412,162
+          L 416,174 L 414,186 L 408,196 L 402,204
+          L 396,214 L 388,222 L 378,230 L 368,236
+          L 356,240 L 342,244 L 328,246 L 314,246
+          L 300,248 L 284,248 L 268,246 L 254,242
+          L 238,240 L 224,238 L 210,234 L 198,228
+          L 186,220 L 176,210 L 168,200 L 162,190
+          L 154,178 L 148,166 L 142,154 L 138,140
+          L 132,128 L 128,114 L 124,100 L 122,86
+          L 118,72 L 116,58 L 120,46 L 132,36
+          Z
+        "
+        fill="rgba(255,145,77,0.05)"
+        stroke="rgba(255,145,77,0.22)"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
       />
-      {/* Portugal border suggestion */}
+
+      {/* Portugal dashed border (left ~20% of peninsula) */}
       <path
-        d="M 108,42 C 104,74 96,124 102,148 L 108,172 C 114,196 124,220 140,238 L 158,258"
+        d="M 152,28 L 132,36 L 120,46 L 116,58 L 118,72 L 122,86 L 124,100 L 128,114 L 132,128 L 138,140 L 142,154 L 148,166 L 154,178 L 162,190 L 168,200"
         fill="none"
-        stroke="rgba(255,145,77,0.08)"
+        stroke="rgba(255,145,77,0.09)"
         strokeWidth="1"
         strokeDasharray="3 4"
       />
 
-      {/* ── Alicante / Costa Blanca glow zone ── */}
-      {/* Glow layers */}
-      <motion.circle
-        cx="412" cy="195" r="38"
-        fill="rgba(255,145,77,0.06)"
-        animate={{ r: [34, 50, 34], opacity: [0.5, 0, 0.5] }}
+      {/* ── Alicante / Costa Blanca — right-east coast ── */}
+      {/* Geographic position: right side, roughly 60% down */}
+      <motion.circle cx="400" cy="190" r="44"
+        fill="rgba(255,145,77,0.05)"
+        animate={{ r: [38, 56, 38], opacity: [0.4, 0, 0.4] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.circle
-        cx="412" cy="195" r="22"
-        fill="rgba(255,145,77,0.10)"
-        animate={{ r: [18, 30, 18], opacity: [0.7, 0.1, 0.7] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+      <motion.circle cx="400" cy="190" r="24"
+        fill="rgba(255,145,77,0.09)"
+        animate={{ r: [20, 32, 20], opacity: [0.6, 0.1, 0.6] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
       />
-      {/* Dot */}
-      <circle cx="412" cy="195" r="5" fill="#ff914d" opacity="0.9" />
-      <circle cx="412" cy="195" r="2.5" fill="#fff" opacity="0.8" />
-      {/* Label */}
-      <text x="422" y="192" fill="rgba(255,145,77,0.9)" fontSize="9" fontWeight="600" fontFamily="system-ui">Alicante</text>
-      <text x="422" y="202" fill="rgba(255,255,255,0.35)" fontSize="7" fontFamily="system-ui">Costa Blanca</text>
+      <circle cx="400" cy="190" r="5.5" fill="#ff914d" opacity="0.95" />
+      <circle cx="400" cy="190" r="2.5" fill="#fff" opacity="0.85" />
+      <text x="412" y="187" fill="rgba(255,145,77,0.95)" fontSize="9" fontWeight="700" fontFamily="system-ui">Alicante</text>
+      <text x="412" y="198" fill="rgba(255,255,255,0.35)" fontSize="7.5" fontFamily="system-ui">Costa Blanca</text>
 
-      {/* ── Canary Islands — shown as inset bottom-left ── */}
-      {/* Inset box */}
-      <rect x="12" y="230" width="118" height="96" rx="6"
-        fill="rgba(255,145,77,0.03)"
-        stroke="rgba(255,145,77,0.15)"
+      {/* ── Canary Islands inset — bottom left ── */}
+      <rect x="10" y="262" width="150" height="106" rx="7"
+        fill="rgba(20,20,20,0.6)"
+        stroke="rgba(255,145,77,0.18)"
         strokeWidth="1"
         strokeDasharray="4 3"
       />
-      <text x="18" y="243" fill="rgba(255,255,255,0.25)" fontSize="6.5" fontFamily="system-ui">Islas Canarias</text>
+      <text x="85" y="277" fill="rgba(255,255,255,0.3)" fontSize="7" fontFamily="system-ui" textAnchor="middle" fontWeight="600">ISLAS CANARIAS</text>
 
-      {/* Island shapes — simplified dots with labels */}
+      {/* Islands as small blobs — approximate relative positions */}
+      {/* W→E: El Hierro, La Palma, La Gomera, Tenerife, Gran Canaria, Fuerteventura, Lanzarote */}
       {[
-        { cx: 28,  cy: 268, label: "El Hierro",     lx: 36  },
-        { cx: 46,  cy: 256, label: "La Gomera",     lx: 54  },
-        { cx: 60,  cy: 262, label: "Tenerife",      lx: 68  },
-        { cx: 76,  cy: 254, label: "Gran Canaria",  lx: 84  },
-        { cx: 64,  cy: 278, label: "La Palma",      lx: 72  },
-        { cx: 92,  cy: 260, label: "Fuerteventura", lx: 100 },
-        { cx: 108, cy: 252, label: "Lanzarote",     lx: 116 },
-      ].map(({ cx, cy, label, lx }, i) => (
-        <g key={label}>
-          <motion.circle
-            cx={cx} cy={cy} r="10"
-            fill="rgba(255,145,77,0.07)"
-            animate={{ r: [8, 15, 8], opacity: [0.5, 0, 0.5] }}
-            transition={{ duration: 2.8, repeat: Infinity, delay: i * 0.25, ease: "easeInOut" }}
+        { cx: 22,  cy: 330, r: 5   },  // El Hierro
+        { cx: 34,  cy: 310, r: 6   },  // La Palma
+        { cx: 50,  cy: 332, r: 4.5 },  // La Gomera
+        { cx: 64,  cy: 320, r: 9   },  // Tenerife (biggest)
+        { cx: 90,  cy: 328, r: 8   },  // Gran Canaria
+        { cx: 115, cy: 308, r: 6.5 },  // Fuerteventura
+        { cx: 140, cy: 298, r: 5   },  // Lanzarote
+      ].map(({ cx, cy, r }, i) => (
+        <g key={i}>
+          <motion.circle cx={cx} cy={cy} r={r + 8}
+            fill="rgba(255,145,77,0.06)"
+            animate={{ r: [r + 5, r + 14, r + 5], opacity: [0.5, 0, 0.5] }}
+            transition={{ duration: 2.8, repeat: Infinity, delay: i * 0.22, ease: "easeInOut" }}
           />
-          <circle cx={cx} cy={cy} r="3.5" fill="#ff914d" opacity="0.85" />
-          <circle cx={cx} cy={cy} r="1.5" fill="#fff" opacity="0.7" />
+          <ellipse cx={cx} cy={cy} rx={r} ry={r * 0.55}
+            fill="rgba(255,145,77,0.25)"
+            stroke="rgba(255,145,77,0.5)"
+            strokeWidth="0.8"
+          />
+          <circle cx={cx} cy={cy} r="2" fill="#ff914d" opacity="0.9" />
         </g>
       ))}
 
-      {/* Canary Islands glow — unified */}
-      <motion.ellipse
-        cx="70" cy="264" rx="68" ry="28"
+      {/* Canary unified glow */}
+      <motion.ellipse cx="82" cy="318" rx="75" ry="40"
         fill="rgba(255,145,77,0.04)"
-        animate={{ opacity: [0.4, 0.9, 0.4] }}
-        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+        animate={{ opacity: [0.3, 0.8, 0.3] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
 
-      {/* ── Dotted line connecting Canaries to mainland ── */}
+      {/* ── Dotted arc from Canaries to Alicante ── */}
       <motion.path
-        d="M 70,240 C 120,200 200,200 300,210 L 405,193"
+        d="M 158,290 C 220,250 310,230 390,192"
         fill="none"
-        stroke="rgba(255,145,77,0.2)"
-        strokeWidth="0.8"
-        strokeDasharray="4 5"
+        stroke="rgba(255,145,77,0.22)"
+        strokeWidth="0.9"
+        strokeDasharray="5 5"
         initial={{ pathLength: 0, opacity: 0 }}
         whileInView={{ pathLength: 1, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
+        transition={{ duration: 2.2, ease: "easeInOut", delay: 0.6 }}
       />
 
-      {/* ── Coverage label top-right ── */}
-      <text x="460" y="52" fill="rgba(255,145,77,0.5)" fontSize="7.5" fontFamily="system-ui" textAnchor="middle">Área de cobertura</text>
-      <text x="460" y="63" fill="rgba(255,255,255,0.2)" fontSize="6.5" fontFamily="system-ui" textAnchor="middle">Coverage area</text>
     </svg>
   );
 }

@@ -47,7 +47,7 @@ export default function MobileCtaBar() {
         {/* Get a Quote button */}
         <a
           href="#contact"
-          className="flex-1 bg-gradient-to-r from-orange to-amber-500 text-white font-bold text-base rounded-xl flex items-center justify-center shadow-lg shadow-orange/20 active:scale-95 transition-transform"
+          className="flex-1 bg-gradient-to-r from-[#ff914d] to-[#e65a1e] text-white font-bold text-base rounded-xl flex items-center justify-center shadow-lg shadow-orange/20 active:scale-95 transition-transform"
         >
           {t("nav.cta")}
         </a>

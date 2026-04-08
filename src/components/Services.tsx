@@ -75,16 +75,16 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="group bg-dark-3/60 border border-white/5 hover:border-orange/30 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-orange/8 flex gap-4 items-start"
+              className="group bg-dark-3/60 border border-white/5 hover:border-orange/30 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-orange/10 flex gap-4 items-start"
             >
-              <div className="w-9 h-9 rounded-lg bg-orange/10 border border-orange/15 flex items-center justify-center shrink-0 group-hover:bg-orange/20 transition-all duration-300">
-                <Icon className="w-4 h-4 text-orange" />
+              <div className="w-10 h-10 rounded-lg bg-orange/10 border border-orange/15 flex items-center justify-center shrink-0 group-hover:bg-orange/20 transition-all duration-300">
+                <Icon className="w-5 h-5 text-orange" />
               </div>
               <div className="min-w-0">
-                <h3 className="text-sm font-bold text-white mb-1.5 group-hover:text-orange transition-colors duration-200">
+                <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-orange transition-colors duration-200">
                   {t(titleKey)}
                 </h3>
-                <p className="text-white/40 text-xs leading-relaxed line-clamp-3">{t(descKey)}</p>
+                <p className="text-white/50 text-sm leading-relaxed line-clamp-3">{t(descKey)}</p>
               </div>
             </motion.div>
           ))}
