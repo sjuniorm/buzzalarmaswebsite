@@ -22,9 +22,14 @@ export const metadata: Metadata = {
     locale: "es_ES",
     type: "website",
   },
+  manifest: "/images/favicon_io/site.webmanifest",
   icons: {
-    icon: "/images/logo-white.png",
-    apple: "/images/logo-white.png",
+    icon: [
+      { url: "/images/favicon_io/favicon.ico" },
+      { url: "/images/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/images/favicon_io/apple-touch-icon.png",
   },
 };
 

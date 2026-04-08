@@ -1,0 +1,13 @@
+{
+  "name": "Buzz Alarmas",
+  "short_name": "Buzz Alarmas",
+  "description": "Sistemas de alarma profesionales para hogares y negocios en las Islas Canarias y Alicante.",
+  "icons": [
+    { "src": "/images/favicon_io/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/favicon_io/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#ff914d",
+  "background_color": "#0e0e0e",
+  "display": "standalone",
+  "start_url": "/"
+}
