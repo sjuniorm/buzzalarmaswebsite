@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Empresa de alarmas homologada R.N.S.P. en Tenerife, Gran Canaria, Lanzarote, Fuerteventura y Provincia de Alicante. Vigilancia 24/7, respuesta policial directa e instalación gratuita.",
   keywords:
-    "alarmas canarias, alarmas alicante, alarma hogar tenerife, alarma negocio gran canaria, seguridad antiokupa, detección incendio, central receptora 24 horas, instalación gratuita alarma, lanzarote fuerteventura alarmas, RNSP",
+    "alarmas canarias, alarmas alicante, alarma hogar tenerife, alarma negocio gran canaria, seguridad antiocupa, detección incendio, central receptora 24 horas, instalación gratuita alarma, lanzarote fuerteventura alarmas, RNSP",
   metadataBase: new URL("https://buzzalarmaswebsite.vercel.app"),
   alternates: { canonical: "/" },
   openGraph: {

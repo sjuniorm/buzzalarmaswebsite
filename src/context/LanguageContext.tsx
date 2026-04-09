@@ -260,14 +260,14 @@ const translations: Record<string, Record<Lang, string>> = {
   "urgency.title": { en: "Don't Wait for the Worst", es: "No esperes lo peor" },
   "urgency.sub": {
     en: "In Spain, property crime and illegal occupation are growing threats. The right alarm system is your best defence.",
-    es: "En España, los robos y la okupación ilegal son amenazas crecientes. El sistema de alarma adecuado es tu mejor defensa.",
+    es: "En España, los robos y la ocupación ilegal son amenazas crecientes. El sistema de alarma adecuado es tu mejor defensa.",
   },
   "urgency.robbery.title": { en: "Burglary & Robbery", es: "Robo e Irrupción" },
   "urgency.robbery.desc": {
     en: "Spain records thousands of home break-ins every year. Most happen when a property looks unprotected. A visible alarm system is a proven deterrent.",
     es: "España registra miles de robos en domicilios cada año. La mayoría ocurren cuando la propiedad parece desprotegida. Un sistema de alarma visible es un disuasor demostrado.",
   },
-  "urgency.squatter.title": { en: "Illegal Occupation (Okupa)", es: "Ocupación Ilegal (Okupa)" },
+  "urgency.squatter.title": { en: "Illegal Occupation (Ocupa)", es: "Ocupación Ilegal (Ocupa)" },
   "urgency.squatter.desc": {
     en: "Squatters can take over an unoccupied property in hours. Our specialised alerts notify you the moment anyone enters. With a connected alarm, our control room can alert police if the situation requires it. Early detection is the best way to stop an occupation before it takes hold.",
     es: "Los ocupas pueden tomar una propiedad desocupada en horas. Nuestras alertas especializadas te avisan en el momento en que alguien entra. Con una alarma conectada, nuestra central puede avisar a la policía si la situación lo requiere. La detección temprana es la mejor forma de frenar una ocupación antes de que se consolide.",
