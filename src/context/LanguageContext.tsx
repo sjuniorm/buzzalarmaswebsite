@@ -37,7 +37,7 @@ const translations: Record<string, Record<Lang, string>> = {
   "trust.years": { en: "30+ Years Experience", es: "30+ años de experiencia" },
   "trust.monitoring": { en: "24/7 Monitoring", es: "Vigilancia 24/7" },
   "trust.police": { en: "Police Response", es: "Respuesta policial" },
-  "trust.certified": { en: "R.N.S.P. Certified", es: "Certificados R.N.S.P." },
+  "trust.certified": { en: "R.N.S.P. Certified Company", es: "Empresa con certificación R.N.S.P." },
   "trust.free": { en: "Free Installation", es: "Instalación gratuita" },
 
   // Services
