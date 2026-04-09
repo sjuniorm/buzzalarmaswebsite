@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | Buzz Alarmas",
+  title: "Condiciones Generales del Servicio | Buzz Alarmas",
   description: "Condiciones generales del servicio de Buzz Alarmas — instalación, mantenimiento y conexión a central receptora de alarmas.",
 };
 
@@ -21,7 +21,6 @@ function Section({ number, title, children }: { number: string; title: string; c
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-dark text-white">
-      {/* Header */}
       <header className="border-b border-white/5 bg-dark-2">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/">
@@ -34,11 +33,10 @@ export default function TermsAndConditions() {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-16">
-        {/* Title */}
         <div className="mb-12">
           <h1 className="text-4xl font-black text-white mb-3">Condiciones Generales del Servicio</h1>
           <div className="w-16 h-1 bg-orange rounded-full mb-4" />
-          <p className="text-white/40 text-sm">Buzz Alarmas · R.N.S.P. 4557 · www.buzzalarmas.com</p>
+          <p className="text-white/40 text-sm">BUZZ ALARMAS, S.L. · CIF: B01623032 · www.buzzalarmas.com</p>
         </div>
 
         <Section number="1" title="Objeto del Contrato">
@@ -68,7 +66,10 @@ export default function TermsAndConditions() {
 
         <Section number="3" title="Precio">
           <p>
-            El precio de los servicios objeto de este contrato será el determinado en las Condiciones Particulares para cada servicio contratado según su modalidad. A este precio se añadirán los impuestos que legalmente corresponda repercutir a BUZZ ALARMAS, al tipo en vigor en cada momento.
+            El precio de los servicios objeto de este contrato será el determinado en las Condiciones Particulares para cada servicio contratado según su modalidad.
+          </p>
+          <p>
+            A este precio se añadirán los impuestos que legalmente corresponda repercutir a BUZZ ALARMAS, al tipo en vigor en cada momento.
           </p>
           <p>
             Durante la vigencia del contrato, el precio inicial pactado por los servicios objeto del mismo podrá estar sujeto a revisión el 1 de enero de cada año, de acuerdo con la variación experimentada por la media aritmética de los índices publicados de IPC interanual.
@@ -83,17 +84,17 @@ export default function TermsAndConditions() {
             El período de garantía del sistema de seguridad adquirido a BUZZ ALARMAS y de su instalación es de dos años contados desde la fecha de instalación del sistema de seguridad. Esta garantía comprende:
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
-            <li>Todo defecto de fabricación del sistema de seguridad que afecte a su correcto funcionamiento</li>
-            <li>Todo defecto en la ejecución de la instalación que afecte al correcto funcionamiento del sistema</li>
-            <li>Todo defecto del software que impida el correcto funcionamiento del mismo o cuando no se ajustara a las características descritas en la oferta</li>
+            <li>Todo defecto de fabricación del sistema de seguridad que afecte a su correcto funcionamiento.</li>
+            <li>Todo defecto en la ejecución de la instalación que afecte al correcto funcionamiento del sistema.</li>
+            <li>Todo defecto del software que impida el correcto funcionamiento del mismo o cuando no se ajustara a las características descritas en la oferta.</li>
           </ul>
           <div className="bg-dark-2 border border-white/5 rounded-xl p-5 mt-2">
             <p className="font-semibold text-white/80 mb-2">La presente garantía no cubre:</p>
             <ul className="list-disc list-inside space-y-2 pl-2">
-              <li>Los defectos ocasionados por el desgaste y degradación natural de los componentes y del sistema de seguridad</li>
-              <li>Incidencias derivadas de un uso o manipulación inadecuados o negligentes de la instalación, del software o de los demás componentes por parte del CLIENTE o de terceros no autorizados por BUZZ ALARMAS</li>
-              <li>Incidencias cuyo origen se deba a causas externas o ajenas a BUZZ ALARMAS, tales como sobretensiones en la red, rayos y demás fenómenos atmosféricos, robo, actos vandálicos, incendio o cualquier otra causa ajena al normal uso del sistema de seguridad</li>
-              <li>Los elementos de seguridad adquiridos por el CLIENTE con anterioridad a la firma del presente contrato y conectados al sistema de seguridad instalado por BUZZ ALARMAS</li>
+              <li>Los defectos ocasionados por el desgaste y degradación natural de los componentes y del sistema de seguridad.</li>
+              <li>Incidencias derivadas de un uso o manipulación inadecuados o negligentes de la instalación, del software o de los demás componentes por parte del CLIENTE o de terceros, no autorizados por BUZZ ALARMAS, o de modificaciones o reparaciones y/o mantenimientos incorrectos, abuso del sistema de seguridad, accidentes, etc., que el CLIENTE, o terceros por cuenta de éste o cualquier otro tercero efectúen en el software o en el sistema de seguridad sin el consentimiento expreso de BUZZ ALARMAS.</li>
+              <li>Incidencias cuyo origen se deba a causas externas o ajenas a BUZZ ALARMAS, tales como sobretensiones en la red, rayos y demás fenómenos atmosféricos, robo, actos vandálicos, incendio o cualquier otra causa ajena al normal uso del sistema de seguridad.</li>
+              <li>Los elementos de seguridad adquiridos por el CLIENTE con anterioridad a la firma del presente contrato y conectados al sistema de seguridad instalado por BUZZ ALARMAS.</li>
             </ul>
           </div>
           <p>
@@ -104,27 +105,29 @@ export default function TermsAndConditions() {
         <Section number="5" title="Obligaciones del Cliente">
           <p>El CLIENTE deberá, en todo caso, conectar el sistema de alarma cada vez que pretenda evitar el acceso de personas no autorizadas al lugar y, especialmente, cada vez que el lugar quede abandonado y sin vigilancia.</p>
           <p>El CLIENTE no manipulará e impedirá que se manipulen los sistemas de seguridad por personas distintas a las de BUZZ ALARMAS.</p>
-          <p>El CLIENTE comunicará a BUZZ ALARMAS con la mayor urgencia posible cualquier avería o incidencia que detecte en el sistema de seguridad.</p>
+          <p>El CLIENTE Comunicará a BUZZ ALARMAS con la mayor urgencia posible cualquier avería o incidencia que detecte en el sistema de seguridad.</p>
           <p>BUZZ ALARMAS no será responsable de los daños ocasionados en el sistema de seguridad del CLIENTE por no haber facilitado la información señalada anteriormente.</p>
           <p>Es responsabilidad del CLIENTE observar en todo momento que el sistema de seguridad está operativo y que no esté expuesto al abuso. El CLIENTE es responsable del daño producido al sistema debido al uso inadecuado del mismo.</p>
           <p>Reintegrará a BUZZ ALARMAS a la finalización del contrato, cualquiera que fuere la causa, la totalidad de los carteles, rótulos y/o indicativos de seguridad colocados en el lugar objeto de protección que hagan referencia o mención a BUZZ ALARMAS.</p>
-          <p>Pagará el precio y cantidades convenidas en las Condiciones Particulares del presente contrato. La falta de pago por el CLIENTE de cualquiera de las cantidades del precio pactado facultará a BUZZ ALARMAS para la inmediata suspensión de los servicios objeto del presente contrato, sin perjuicio del ejercicio de las acciones judiciales correspondientes.</p>
+          <p>Pagará el precio y cantidades convenidas en las Condiciones Particulares del presente contrato. La falta de pago por el CLIENTE de cualquiera de las cantidades del precio pactado facultará a BUZZ ALARMAS para la inmediata suspensión de los servicios objeto del presente contrato, sin perjuicio del ejercicio de las acciones judiciales correspondientes en reclamación de las cantidades pactadas y pendientes.</p>
         </Section>
 
         <Section number="6" title="Protección de Datos y Confidencialidad">
+          <p className="font-semibold text-white/80">Información sobre Protección de Datos</p>
           <p>
             Los datos personales proporcionados por el CLIENTE, así como cualquier otro dato que pudiera facilitarse como consecuencia de la prestación del Servicio, serán incluidos en un fichero responsabilidad de BUZZ ALARMAS y serán tratados con la finalidad de gestionar el mantenimiento, desarrollo y control de la relación contractual.
           </p>
-          <p>
-            Tratar sus datos personales recabados y aquellos derivados del uso y la prestación del Servicio de manera individualizada con base en nuestro interés legítimo o de manera anonimizada y/o agregada con la finalidad de comprobar que el servicio se está prestando correctamente.
-          </p>
+          <p>Asimismo, y para poder prestar el Servicio correctamente, BUZZ ALARMAS informa al CLIENTE de que tratará los datos personales recabados como consecuencia de la prestación del Servicio, tal y como se detalla a continuación:</p>
+          <ul className="list-disc list-inside space-y-2 pl-2">
+            <li>Tratar sus datos personales recabados y aquellos derivados del uso y la prestación del Servicio de manera individualizada con base en nuestro interés legítimo o de manera anonimizada y/o agregada con la finalidad de comprobar que el servicio se está prestando correctamente.</li>
+            <li>Tratar sus datos personales recabados o generados como consecuencia de la prestación del Servicio para llevar a cabo acciones comerciales generales o adaptadas a su perfil, por cualquier medio (Carta, Teléfono, e-mail, SMS, MMS, aplicaciones de mensajería instantánea...), sobre productos o servicios de BUZZ ALARMAS o relacionados con la vigilancia, seguridad y afines durante la relación contractual y una vez finalizada la misma durante el tiempo que BUZZ ALARMAS tiene previsto en las políticas internas de retención de datos.</li>
+          </ul>
           <p>
             El CLIENTE podrá ejercitar, en cualquier momento, los derechos de acceso, rectificación, cancelación/supresión, oposición, limitación y portabilidad reconocidos en la normativa vigente en materia de protección de datos de carácter personal dirigiéndose a BUZZ ALARMAS, por cualquier medio de los indicados en la{" "}
-            <Link href="/privacy-policy" className="text-orange hover:underline">
-              política de privacidad
-            </Link>{" "}
-            o a la Agencia Española de Protección de Datos (www.agpd.es).
+            <Link href="/privacy-policy" className="text-orange hover:underline">política de privacidad</Link>{" "}
+            en www.buzzalarmas.com o a la autoridad de protección de datos que, para el caso que nos ocupa, será la Agencia Española de Protección de Datos (www.agpd.es).
           </p>
+          <p className="font-semibold text-white/80">Información sobre Confidencialidad</p>
           <p>
             BUZZ ALARMAS mantendrá la confidencialidad de los datos personales del CLIENTE que obtenga con motivo de la prestación del Servicio y se compromete a implementar las medidas tecnológicas adecuadas para garantizar la seguridad de los datos personales de sus clientes.
           </p>
@@ -142,7 +145,10 @@ export default function TermsAndConditions() {
             Para cumplir el plazo disponible de ejercicio del derecho de desistimiento, será suficiente que la comunicación relativa a dicho ejercicio de su derecho sea enviada antes de que venza el plazo correspondiente.
           </p>
           <p>
-            En caso de desistimiento por parte del CLIENTE, BUZZ ALARMAS devolverá el importe abonado hasta la fecha por el CLIENTE. BUZZ ALARMAS podrá retener el reembolso hasta que el CLIENTE efectúe la devolución del total de los productos que integran el servicio de alarma instalado o, en su caso, permita el acceso al lugar objeto de protección del CLIENTE del personal autorizado de BUZZ ALARMAS para el desmontaje y retirada del mismo.
+            En caso de desistimiento por parte del CLIENTE, BUZZ ALARMAS devolverá el importe abonado hasta la fecha por el CLIENTE. BUZZ ALARMAS, podrá retener el reembolso hasta que el CLIENTE efectúe la devolución del total de los productos que integran el servicio de alarma instalado o, en su caso, permitir el acceso al lugar objeto de protección del CLIENTE del personal autorizado de BUZZ ALARMAS para el desmontaje y retirada del mismo. La recogida de los productos instalados se realizará por cuenta de BUZZ ALARMAS, siendo el CLIENTE, únicamente responsable de la disminución de valor de los bienes resultante de una manipulación distinta a la necesaria para establecer la naturaleza, las características y el funcionamiento de los bienes.
+          </p>
+          <p>
+            El CLIENTE estará obligado a abonar el importe proporcional a la parte ya prestada del servicio en el momento en que se produzca la comunicación del desistimiento, en relación con el objeto total del contrato.
           </p>
         </Section>
 
@@ -151,19 +157,27 @@ export default function TermsAndConditions() {
             Cualquiera de las partes podrá resolver el presente contrato, mediante notificación fehaciente, por las causas legalmente establecidas. Cuando el CLIENTE quiera solicitar la resolución del contrato de forma voluntaria, deberá contactar con BUZZ ALARMAS en el teléfono de Atención al Cliente.
           </p>
           <p>
-            Sin perjuicio de cualesquiera otros incumplimientos del CLIENTE que pudiesen motivar la resolución del contrato, los siguientes supuestos serán considerados por sí mismos causa suficiente para instar la resolución del contrato por parte de BUZZ ALARMAS:
+            Sin perjuicio de cualesquiera otros incumplimientos del CLIENTE que pudiesen motivar la resolución del contrato conforme a lo establecido en esta cláusula, los siguientes supuestos serán considerados por sí mismos causa suficiente para instar la resolución del contrato por parte de BUZZ ALARMAS, cuando:
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
-            <li>El CLIENTE incumpliese sus compromisos de pago, en los términos y plazos acordados en el presente contrato.</li>
+            <li>El CLIENTE incumpliese sus compromisos de pago, en los términos y plazos acordados en el presente contrato. La demora en los pagos del precio del contrato traerá como consecuencia, además de la facultad de resolución del contrato, la suspensión de los servicios contratados, ello sin perjuicio del derecho que asiste a BUZZ ALARMAS para reclamar judicialmente los importes adeudados.</li>
             <li>Si el CLIENTE realiza alteraciones en el sistema de seguridad y/o en el lugar objeto de protección, de tal manera que dichos cambios afecten a la eficacia o fiabilidad de los sistemas de seguridad instalados.</li>
             <li>Si el CLIENTE, haciendo uso del sistema de seguridad, ocasiona daños y/o perjuicios a terceros.</li>
           </ul>
           <p>
-            En ningún caso la resolución del contrato eximirá al CLIENTE de sus obligaciones de pago frente a BUZZ ALARMAS por cualquier concepto, así como de la Condición de Permanencia.
+            En caso de que cualquiera de las partes estimara que concurre uno de los supuestos de resolución indicados en la presente cláusula, deberá comunicarlo por escrito. Junto con este escrito, el CLIENTE deberá acreditar de manera suficiente su identidad como titular del contrato.
           </p>
+          <p>
+            En caso de resolución del contrato por incumplimiento del CLIENTE, éste deberá abonar a BUZZ ALARMAS: el precio de los servicios ya realizados o en curso a la fecha de la recepción de la comunicación de resolución y en su caso, el precio de compra del sistema; todos los daños y perjuicios debidamente acreditados que sufriere BUZZ ALARMAS y que se deriven del incumplimiento o de la resolución.
+          </p>
+          <p>
+            En caso de que el CLIENTE haya escogido una de las modalidades de pago aplazado del sistema de seguridad ofrecidas por BUZZ ALARMAS, el incumplimiento de cualquiera de los plazos acordados o la resolución voluntaria de la prestación de servicios, facultará a BUZZ ALARMAS a darlos por vencidos anticipadamente y reclamar el pago inmediato de todas las cantidades pendientes de satisfacer o en su defecto, a voluntad de BUZZ ALARMAS, a autorizar a personal de BUZZ ALARMAS la entrada a su inmueble para que proceda al desmontaje y retirada del sistema de seguridad instalado.
+          </p>
+          <p>En ningún caso la resolución del contrato eximirá al CLIENTE de sus obligaciones de pago frente a BUZZ ALARMAS por cualquier concepto, así como de la Condición de Permanencia.</p>
+          <p>En los casos que sea BUZZ ALARMAS quien rescinda el contrato unilateralmente, el CLIENTE no tendrá derecho a indemnización alguna por parte de BUZZ ALARMAS.</p>
         </Section>
 
-        <Section number="9" title="Legislación Aplicable">
+        <Section number="9" title="Legislación aplicable">
           <p>
             Para cualquier controversia que pudiera suscitarse con motivo del presente contrato ambas partes acuerdan someterse al Derecho común español y a la normativa de Seguridad Privada vigente en España.
           </p>
@@ -172,10 +186,9 @@ export default function TermsAndConditions() {
           </p>
         </Section>
 
-        {/* Bottom nav */}
         <div className="border-t border-white/10 pt-8 mt-12 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between text-sm">
           <Link href="/privacy-policy" className="text-orange hover:underline">
-            ← Privacy Policy
+            ← Aviso Legal y Política de Privacidad
           </Link>
           <Link href="/" className="text-white/40 hover:text-white transition-colors">
             Volver a buzzalarmas.com →
@@ -183,9 +196,8 @@ export default function TermsAndConditions() {
         </div>
       </main>
 
-      {/* Simple footer */}
       <footer className="border-t border-white/5 py-6 text-center text-white/25 text-xs">
-        © {new Date().getFullYear()} Buzz Alarmas. Todos los derechos reservados. · Homologada por R.N.S.P. 4557 · Con aviso a policía
+        © {new Date().getFullYear()} Buzz Alarmas. Todos los derechos reservados. · BUZZ ALARMAS, S.L. · CIF: B01623032 · Homologada R.N.S.P. 4557
       </footer>
     </div>
   );
