@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 import { MapPinIcon } from "@/components/Icons";
 
-const canaryIslands = ["Tenerife", "Gran Canaria", "Lanzarote", "Fuerteventura"];
+const canaryIslands = ["Islas Canarias"];
 const alicanteAreas = ["Alicante", "Benidorm", "Torrevieja", "Denia", "Javea", "Calpe", "Altea", "Orihuela Costa"];
 
 export default function Coverage() {
@@ -46,7 +46,7 @@ export default function Coverage() {
             className="relative bg-dark-3 border border-white/6 hover:border-orange/30 rounded-3xl p-8 overflow-hidden transition-all duration-300 group"
           >
             {/* Decorative background number */}
-            <div className="absolute top-4 right-6 text-[110px] font-black text-white/[0.03] leading-none select-none pointer-events-none">4</div>
+            <div className="absolute top-4 right-6 text-[110px] font-black text-white/[0.03] leading-none select-none pointer-events-none">7</div>
             {/* Top glow accent */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange/30 to-transparent" />
 
@@ -64,7 +64,7 @@ export default function Coverage() {
               <div>
                 <p className="text-white/40 text-xs uppercase tracking-widest mb-1">{t("coverage.canary")}</p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-black text-white leading-none">4</span>
+                  <span className="text-4xl font-black text-white leading-none">7</span>
                   <span className="text-white/40 text-sm">{lang === "en" ? "islands covered" : "islas cubiertas"}</span>
                 </div>
               </div>

@@ -62,7 +62,7 @@ const translations: Record<string, Record<Lang, string>> = {
   "services.monitoring.title": { en: "24/7 Monitoring", es: "Central de alarmas" },
   "services.monitoring.desc": {
     en: "Our control room never sleeps. The moment your alarm triggers, we respond. With police if needed.",
-    es: "Nuestra central nunca duerme. En el momento que salta la alarma, respondemos. Con policía si es necesario.",
+    es: "Nuestra central nunca duerme. En el momento que salta la alarma, respondemos. Avisamos a policía si es necesario.",
   },
   "services.app.title": { en: "Smart App Control", es: "Control desde el móvil" },
   "services.app.desc": {
@@ -74,8 +74,8 @@ const translations: Record<string, Record<Lang, string>> = {
     es: "Protección antiocupación",
   },
   "services.squatter.desc": {
-    en: "Specially designed alerts for vacant properties. Stop squatters before they settle in.",
-    es: "Alertas especialmente diseñadas para propiedades vacías. Para a los okupas antes de que entren.",
+    en: "Specially designed alerts for vacant properties. Deter squatters before they settle in.",
+    es: "Alertas especialmente diseñadas para propiedades vacías. Detén a los ocupas si es necesario.",
   },
   "services.ajax": {
     en: "Powered by Ajax Systems technology",
@@ -212,8 +212,8 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "coverage.canary": { en: "Canary Islands", es: "Islas Canarias" },
   "coverage.canary.desc": {
-    en: "We cover Tenerife, Gran Canaria, Lanzarote and Fuerteventura. Professional installation and full 24/7 monitoring on all four islands.",
-    es: "Cubrimos Tenerife, Gran Canaria, Lanzarote y Fuerteventura. Instalación profesional y vigilancia 24/7 en las cuatro islas.",
+    en: "We cover the Canary Islands. Professional installation and full 24/7 monitoring across the archipelago.",
+    es: "Cubrimos las Islas Canarias. Instalación profesional y vigilancia 24/7 en todo el archipiélago.",
   },
   "coverage.alicante": {
     en: "Province of Alicante",
@@ -269,8 +269,8 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "urgency.squatter.title": { en: "Illegal Occupation (Okupa)", es: "Ocupación Ilegal (Okupa)" },
   "urgency.squatter.desc": {
-    en: "Squatters can take over an unoccupied property in hours. Our specialised alerts notify you the moment anyone enters. With a connected alarm, our control room is authorised to dispatch police directly to remove squatters. It is the only legal way to stop an occupation before it starts.",
-    es: "Los okupas pueden tomar una propiedad desocupada en horas. Nuestras alertas especializadas te avisan en el momento en que alguien entra. Con una alarma conectada, nuestra central está autorizada para enviar a la policía directamente a desalojar a los ocupantes. Es la única forma legal de frenar una ocupación antes de que se consolide.",
+    en: "Squatters can take over an unoccupied property in hours. Our specialised alerts notify you the moment anyone enters. With a connected alarm, our control room can alert police if the situation requires it. Early detection is the best way to stop an occupation before it takes hold.",
+    es: "Los ocupas pueden tomar una propiedad desocupada en horas. Nuestras alertas especializadas te avisan en el momento en que alguien entra. Con una alarma conectada, nuestra central puede avisar a la policía si la situación lo requiere. La detección temprana es la mejor forma de frenar una ocupación antes de que se consolide.",
   },
   "urgency.solution.title": { en: "Buzz Alarmas Is the Solution", es: "Buzz Alarmas es la solución" },
   "urgency.solution.desc": {
