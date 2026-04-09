@@ -16,7 +16,6 @@ const locations = [
 
 const phones = [
   { label: "Principal", value: "+34 902 099 910", href: "tel:+34902099910" },
-  { label: "Canarias",  value: "+34 922 099 200 / +34 928 077 079", href: "tel:+34922099200" },
 ];
 
 const emails = [
