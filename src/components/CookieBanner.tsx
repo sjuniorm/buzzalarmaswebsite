@@ -48,7 +48,7 @@ export default function CookieBanner() {
   const c = copy[lang];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[100] bg-dark-2 border-t border-white/10 shadow-2xl">
+    <div className="fixed top-0 left-0 right-0 z-[200] bg-dark-2 border-b border-white/10 shadow-2xl">
       <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
         <p className="text-white/60 text-sm leading-relaxed max-w-2xl">
           {c.text}{" "}
