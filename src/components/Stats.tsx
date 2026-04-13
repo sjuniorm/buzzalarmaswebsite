@@ -6,7 +6,6 @@ import { useLang } from "@/context/LanguageContext";
 
 const stats = [
   { value: 30, suffix: "+", display: null, labelKey: "stats.years" },
-  { value: 8,  suffix: "",  display: null, labelKey: "stats.islands" },
   { value: null, suffix: "", display: "24/7", labelKey: "stats.monitoring" },
   { value: 100, suffix: "%", display: null, labelKey: "stats.wireless" },
 ];
@@ -49,7 +48,7 @@ export default function Stats() {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange/40 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid grid-cols-3 gap-8 md:gap-4">
           {stats.map(({ value, suffix, display, labelKey }, i) => (
             <motion.div
               key={i}

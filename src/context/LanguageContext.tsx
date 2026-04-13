@@ -252,7 +252,6 @@ const translations: Record<string, Record<Lang, string>> = {
 
   // Stats
   "stats.years": { en: "Years Experience", es: "Años de experiencia" },
-  "stats.islands": { en: "Islands Covered", es: "Islas cubiertas" },
   "stats.monitoring": { en: "Monitoring", es: "Vigilancia" },
   "stats.wireless": { en: "Wireless", es: "Inalámbrico" },
 
