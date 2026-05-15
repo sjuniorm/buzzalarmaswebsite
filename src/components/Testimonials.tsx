@@ -121,7 +121,7 @@ export default function Testimonials() {
           className="flex justify-center mt-12"
         >
           <a
-            href="https://www.google.com/search?q=Buzz+Alarmas+Tenerife"
+            href="https://www.google.com/search?client=ms-android-google&hs=ehsp&sca_esv=5c55c0604bc74172&q=buzz+alarmas+rese%C3%B1as&ludocid=8750804009320408686&ibp=gwp;0,7&hl=es-ES&sa=X&ved=2ahUKEwjT-dOt_rWUAxWhZ0EAHSIoAJwQ9fQKegQIMhAG&biw=149&bih=302&dpr=3#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-dark-2 hover:bg-dark-3 border border-white/10 hover:border-white/20 text-white/60 hover:text-white px-6 py-3 rounded-full transition-all duration-200 text-sm font-medium"
